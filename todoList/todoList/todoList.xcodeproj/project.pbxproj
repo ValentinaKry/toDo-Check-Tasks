@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D728BCE2894080F00816F6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D728BCD2894080F00816F6B /* LaunchScreen.storyboard */; };
 		0DB0EF87288EDF90000329A2 /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DB0EF7B288EDD6A000329A2 /* Roboto-Black.ttf */; };
 		0DB0EF88288EDF93000329A2 /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DB0EF85288EDD6B000329A2 /* Roboto-BlackItalic.ttf */; };
 		0DB0EF89288EDF96000329A2 /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DB0EF7D288EDD6B000329A2 /* Roboto-Bold.ttf */; };
@@ -19,15 +20,15 @@
 		0DB0EF90288EDFC0000329A2 /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DB0EF7E288EDD6B000329A2 /* Roboto-Regular.ttf */; };
 		0DB0EF91288EDFC3000329A2 /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DB0EF7F288EDD6B000329A2 /* Roboto-Thin.ttf */; };
 		0DB0EF94288EE07E000329A2 /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DB0EF80288EDD6B000329A2 /* Roboto-ThinItalic.ttf */; };
-		0DB0EF96288FA176000329A2 /* 1Walkthrought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0EF95288FA176000329A2 /* 1Walkthrought.swift */; };
+		0DB0EF96288FA176000329A2 /* Walkthrought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0EF95288FA176000329A2 /* Walkthrought.swift */; };
 		0DB0EF98288FB4F4000329A2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB0EF97288FB4F4000329A2 /* Constants.swift */; };
 		0DF687A1288ED36E00CE57FF /* todoListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF687A0288ED36E00CE57FF /* todoListApp.swift */; };
 		0DF687A5288ED37000CE57FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF687A4288ED37000CE57FF /* Assets.xcassets */; };
 		0DF687A8288ED37000CE57FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF687A7288ED37000CE57FF /* Preview Assets.xcassets */; };
-		0DF687B0288ED3CF00CE57FF /* Walkthrought.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF687AF288ED3CF00CE57FF /* Walkthrought.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D728BCD2894080F00816F6B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DB0EF7A288EDD6A000329A2 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		0DB0EF7B288EDD6A000329A2 /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
 		0DB0EF7C288EDD6B000329A2 /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
@@ -41,13 +42,12 @@
 		0DB0EF84288EDD6B000329A2 /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
 		0DB0EF85288EDD6B000329A2 /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
 		0DB0EF86288EDDE7000329A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		0DB0EF95288FA176000329A2 /* 1Walkthrought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1Walkthrought.swift; sourceTree = "<group>"; };
+		0DB0EF95288FA176000329A2 /* Walkthrought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrought.swift; sourceTree = "<group>"; };
 		0DB0EF97288FB4F4000329A2 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0DF6879D288ED36E00CE57FF /* todoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF687A0288ED36E00CE57FF /* todoListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoListApp.swift; sourceTree = "<group>"; };
 		0DF687A4288ED37000CE57FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DF687A7288ED37000CE57FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0DF687AF288ED3CF00CE57FF /* Walkthrought.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Walkthrought.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,9 +120,9 @@
 		0DF687AE288ED37E00CE57FF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0DF687AF288ED3CF00CE57FF /* Walkthrought.swift */,
-				0DB0EF95288FA176000329A2 /* 1Walkthrought.swift */,
+				0DB0EF95288FA176000329A2 /* Walkthrought.swift */,
 				0DB0EF97288FB4F4000329A2 /* Constants.swift */,
+				0D728BCD2894080F00816F6B /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -188,6 +188,7 @@
 				0DB0EF8E288EDFBB000329A2 /* Roboto-Medium.ttf in Resources */,
 				0DB0EF8A288EDF99000329A2 /* Roboto-BoldItalic.ttf in Resources */,
 				0DF687A8288ED37000CE57FF /* Preview Assets.xcassets in Resources */,
+				0D728BCE2894080F00816F6B /* LaunchScreen.storyboard in Resources */,
 				0DF687A5288ED37000CE57FF /* Assets.xcassets in Resources */,
 				0DB0EF89288EDF96000329A2 /* Roboto-Bold.ttf in Resources */,
 				0DB0EF8B288EDF9B000329A2 /* Roboto-Italic.ttf in Resources */,
@@ -209,9 +210,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DB0EF96288FA176000329A2 /* 1Walkthrought.swift in Sources */,
+				0DB0EF96288FA176000329A2 /* Walkthrought.swift in Sources */,
 				0DF687A1288ED36E00CE57FF /* todoListApp.swift in Sources */,
-				0DF687B0288ED3CF00CE57FF /* Walkthrought.swift in Sources */,
 				0DB0EF98288FB4F4000329A2 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +348,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -378,6 +379,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
