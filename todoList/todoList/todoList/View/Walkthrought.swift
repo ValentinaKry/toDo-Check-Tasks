@@ -48,12 +48,10 @@ struct Walkthrought: View {
                         }
                         .padding(.bottom)
 
-                        //ПРОБДЕМА ТУТ!!!!
+                       
                         ZStack() {
                             Image(onBoardingSteps[it].footerBg)
                                 .resizable()
-                                // Если frame сделать 550 . То будет игнорится safeArea. Почему он не магнититься к самому низу? с любой высотой
-                               // .frame( height: 550)
                                 .frame(height: 280)
 
 
