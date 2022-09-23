@@ -82,13 +82,37 @@ struct CustomDatePicker: View {
 
         VStack {
             if value.day != -1 {
+                if let task = tasks.first(where: { task in
+                    return isSameDay(date1: task.taskDate, date2: currentDate)
+                }) {
+                    Text("\(value.day)")
+                        .font(.title3.bold())
 
-                Text("\(value.day)")
-                    .font(.title3.bold())
+                    Spacer()
+
+                    Circle()
+                        .fill(Color("Pink"))
+                        .frame(width: 8, height: 8)
+                }
+                else  {
+                    Text("\(value.day)")
+                        .font(.title3.bold())
+
+                    Spacer()
+                }
             }
         }
         .padding(.vertical, 8)
         .frame(height: 60, alignment: .top)
+    }
+
+    //cheking dates ...
+
+    func isSameDay(date1: Date, date2: Date) -> Bool {
+        let calendar = Calendar.current
+
+        return calendar.isDate(date1, inSameDayAs: date2)
+
     }
 
     func extraDate() ->[String] {
