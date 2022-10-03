@@ -1,11 +1,13 @@
 
 import Foundation
+import SwiftUI
+import Combine
 
 class OnboardingViewModel : ObservableObject{
 
-    var onTap : (() -> Void)?
+    var onTapSubject = PassthroughSubject<Void, Never>()
 
     func endTap () {
-        onTap?()
+        onTapSubject.send()
     }
 }
