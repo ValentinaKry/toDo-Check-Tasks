@@ -4,46 +4,35 @@ import SwiftUI
 
 struct CustomDatePicker: View {
     @Binding var currentDate: Date
+    let date = Date()
 
     // Month update on arrow button clicks
     @State var currentMonth: Int = 0
     var body: some View {
-        VStack(spacing: 35) {
+        VStack(spacing: 15) {
 
             //Days
             let days: [String] =
-            ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+            ["S", "M", "T", "W", "T", "F", "S"]
 
             HStack (spacing: 20){
 
-                VStack (alignment: .leading, spacing: 10) {
-                    Text(extraDate()[0])
-                        .font(.caption)
-                        .fontWeight(.semibold)
-
+                HStack (alignment: .center, spacing: 10) {
                     Text(extraDate()[1])
-                        .font(.title.bold())
+                    Text(extraDate()[0])
                 }
-
-                Spacer(minLength: 0)
+                .font(.custom("Roboto-ThinItalic", size: 14))
+                .foregroundColor(Color("Gray"))
 
                 Button {
-                    withAnimation {
-                        currentMonth -= 1
-                    }
-                } label: {
-                    Image(systemName: "chevron.left")
-                        .font(.title2)
-                }
-
-                Button {
-                    withAnimation {
-                        currentMonth -= 1
-                    }
+//                    withAnimation {
+//                        currentMonth += 1
+//                    }
 
                 } label: {
-                    Image(systemName: "chevron.right")
-                        .font(.title2)
+                    Image(systemName: "chevron.up")
+                        .font(.title3)
+                        .foregroundColor(Color("Black"))
                 }
 
             }
@@ -54,17 +43,18 @@ struct CustomDatePicker: View {
                 ForEach(days, id: \.self) { day in
 
                     Text(day)
-                        .font(.callout)
-                        .fontWeight(.semibold)
+                        .font(.custom("Roboto-Medium", size: 14))
+                        .foregroundColor(Color("Gray"))
                         .frame(maxWidth: .infinity)
                 }
             }
+            .padding(.horizontal)
 
             // Dates
             // Lazy Grid
             let  columns = Array(repeating: GridItem(.flexible()), count: 7)
 
-            LazyVGrid(columns: columns, spacing: 15) {
+            LazyVGrid(columns: columns, spacing: 0) {
 
                 ForEach(extractDate()) { value in
                     CardView(value: value)
@@ -79,35 +69,19 @@ struct CustomDatePicker: View {
                         }
                 }
             }
+            .padding(.horizontal)
+            .background(.white)
+            .frame(maxWidth: .infinity)
+            .contentShape(Rectangle())
+            .cornerRadius(5)
+            .shadow(color: .gray.opacity(0.1), radius: 1, x: 0, y: 5)
 
             VStack(spacing: 15) {
-                Text("Tasks")
-                    .font(.title2.bold())
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.vertical, 20)
 
                 if let task = tasks.first(where: { task in
                     return isSameDay(date1: task.taskDate, date2: currentDate)
                 }) {
-                    ForEach(task.task) { task in
-                        VStack(alignment: .leading, spacing: 10) {
-
-                            Text(task.time.addingTimeInterval(CGFloat.random(in: 0...5000)), style: .time)
-
-                            Text(task.title)
-                                .font(.title2.bold())
-                        }
-                        .padding(.vertical, 10)
-                        .padding(.horizontal)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .background(
-
-                            Color("Blue")
-                                .opacity(0.5)
-                                .cornerRadius(10)
-                        )
-
-                    }
+                   WorkListToday_View()
                 }
                 else {
                     Text("No Task Found")
@@ -130,7 +104,7 @@ struct CustomDatePicker: View {
                     return isSameDay(date1: task.taskDate, date2: value.date)
                 }) {
                     Text("\(value.day)")
-                        .font(.title3.bold())
+                        .font(.custom("Roboto-Medium", size: 14))
                         .foregroundColor(isSameDay(date1: task.taskDate, date2: currentDate) ? .white : .primary)
                         .frame(maxWidth: .infinity)
 
@@ -138,11 +112,11 @@ struct CustomDatePicker: View {
 
                     Circle()
                         .fill(isSameDay(date1: task.taskDate, date2: currentDate) ? .white : Color("Red"))
-                        .frame(width: 8, height: 8)
+                        .frame(width: 5, height: 5)
                 }
                 else  {
                     Text("\(value.day)")
-                        .font(.title3.bold())
+                        .font(.custom("Roboto-Medium", size: 14))
                         .foregroundColor(isSameDay(date1: value.date, date2: currentDate) ? .white : .primary)
                         .frame(maxWidth: .infinity)
 

@@ -13,9 +13,8 @@ final class OnboardingCoordinator {
     func start () {
         let viewModel = OnboardingViewModel()
         let view = UIHostingController(rootView: OnboardingView(model: viewModel))
-        viewModel.onTapSubject.sink {
-            self.flowEnd?()
-        }
+        viewModel.onTapSubject
+            .sink { self.flowEnd?() }
         .store(in: &cancellables)
 
         rootNavigation.pushViewController(view, animated: false)

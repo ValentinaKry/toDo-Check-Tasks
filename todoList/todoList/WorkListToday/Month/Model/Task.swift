@@ -1,10 +1,11 @@
 import SwiftUI
 
-// Task Model and Sample Tasks
-
 struct Task: Identifiable {
     var id = UUID().uuidString
     var title : String
+    var offset: CGFloat
+    var isCompleted: Bool
+    var isSwipped: Bool
     var time: Date = Date()
 }
 
@@ -24,32 +25,32 @@ func getSampleDate(offset: Int)-> Date {
 
 var tasks : [TaskMetaData] = [
     TaskMetaData(task: [
-        Task(title: "Talk to iJustine"),
-        Task(title: "iPhome 13 Great Design Change😂"),
-        Task(title: "Nothing Much Workout !!!")
+        Task(title: "Talk to iJustine", offset: 0 , isCompleted: true, isSwipped: false),
+        Task(title: "iPhome 13 Great Design Change😂" , offset: 0 , isCompleted: true, isSwipped: false),
+        Task(title: "Nothing Much Workout !!!" , offset: 0 , isCompleted: true, isSwipped: false)
     ], taskDate: getSampleDate(offset: 1)),
 
     TaskMetaData(task: [
-        Task(title: "Talk to Jenna Ezarik")
+        Task(title: "Talk to Jenna Ezarik", offset: 0 , isCompleted: true, isSwipped: false)
     ], taskDate: getSampleDate(offset: -3)),
 
     TaskMetaData(task: [
-        Task(title: "Metting with Tim Cook")
+        Task(title: "Metting with Tim Cook", offset: 0 , isCompleted: true, isSwipped: false)
     ], taskDate: getSampleDate(offset: -8)),
 
     TaskMetaData (task: [
-        Task(title: "Next Version of SwiftUI")
+        Task(title: "Next Version of SwiftUI", offset: 0 , isCompleted: true, isSwipped: false)
     ], taskDate: getSampleDate(offset: 10)),
 
     TaskMetaData(task: [
-        Task(title: "Nothing Much Workout !!!")
+        Task(title: "Nothing Much Workout !!!", offset: 0 , isCompleted: true, isSwipped: false)
     ], taskDate: getSampleDate(offset: -22)),
 
     TaskMetaData(task: [
-        Task(title: "iPhome 13 Great Design Change😂")
+        Task(title: "iPhome 13 Great Design Change😂", offset: 0 , isCompleted: true, isSwipped: false)
     ], taskDate: getSampleDate(offset: 15)),
 
     TaskMetaData(task: [
-        Task(title: "Kavsoft App Updates ....")
+        Task(title: "Kavsoft App Updates ....", offset: 0 , isCompleted: true, isSwipped: false)
     ], taskDate: getSampleDate(offset: -20))
 ]

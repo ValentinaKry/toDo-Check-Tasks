@@ -8,4 +8,5 @@ struct TaskModel : Identifiable {
     var offset: CGFloat
     var isCompleted: Bool
     var isSwipped: Bool
+   // var taskDate: Date
 }
