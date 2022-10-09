@@ -11,7 +11,7 @@ final class WelcomeCoordinator {
 
     func start () {
         let viewModel = WelcomeViewModel()
-        let view = UIHostingController(rootView: Welcome(model: viewModel))
+        let view = UIHostingController(rootView: Welcome(viewModel: viewModel))
         rootNavigation.pushViewController(view, animated: true)
         viewModel.onTap = {
             self.endFlow?()

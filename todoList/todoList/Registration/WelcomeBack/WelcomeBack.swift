@@ -9,8 +9,8 @@ struct WelcomeBack: View {
 
         VStack {
             MainTitle(firstTitle: "Welcome back", description: "Sign in to continue")
-            UsernameForm()
-            PasswordForm()
+//            UsernameForm()
+//            PasswordForm()
             Button  {
                 hideKeyboard()
                 viewModel.forgotPassword()

@@ -1,20 +1,22 @@
 
-import Foundation
+import UIKit
+import Combine
 
 class WelcomeBackViewModel: ObservableObject {
-    var signUpTapped : (() -> Void)?
-    var signInTaped:  (() -> Void)?
-    var passwordTap: (() -> Void)?
+
+    var signUpTapped = PassthroughSubject<Void, Never>()
+    var signInTaped = PassthroughSubject<Void, Never>()
+    var passwordTap = PassthroughSubject<Void, Never>()
 
     func signUpTap () {
-        signUpTapped?()
+        signUpTapped.send()
     }
 
     func signInTap () {
-        signInTaped?()
+        signInTaped.send()
     }
 
     func forgotPassword () {
-        passwordTap?()
+        passwordTap.send()
     }
 }

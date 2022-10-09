@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D40DCC528DD8CC800EE7483 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D40DCC428DD8CC800EE7483 /* Task.swift */; };
-		0D4DA8B928ED852D0027305C /* NetworkigModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DA8B828ED852D0027305C /* NetworkigModel.swift */; };
+		0D4DA8B928ED852D0027305C /* NetworkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DA8B828ED852D0027305C /* NetworkingViewModel.swift */; };
 		0D6FAF9028D32E4900E09979 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6FAF8F28D32E4900E09979 /* WelcomeCoordinator.swift */; };
 		0D6FAF9228D32EB600E09979 /* WelcomeVeiwModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6FAF9128D32EB500E09979 /* WelcomeVeiwModel.swift */; };
 		0D6FAF9528D334AA00E09979 /* WelcomeBackCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6FAF9428D334AA00E09979 /* WelcomeBackCoordinator.swift */; };
@@ -66,7 +66,7 @@
 
 /* Begin PBXFileReference section */
 		0D40DCC428DD8CC800EE7483 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		0D4DA8B828ED852D0027305C /* NetworkigModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkigModel.swift; sourceTree = "<group>"; };
+		0D4DA8B828ED852D0027305C /* NetworkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewModel.swift; sourceTree = "<group>"; };
 		0D6FAF8F28D32E4900E09979 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
 		0D6FAF9128D32EB500E09979 /* WelcomeVeiwModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVeiwModel.swift; sourceTree = "<group>"; };
 		0D6FAF9428D334AA00E09979 /* WelcomeBackCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackCoordinator.swift; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 		0D4DA8B628ED85070027305C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				0D4DA8B828ED852D0027305C /* NetworkigModel.swift */,
+				0D4DA8B828ED852D0027305C /* NetworkingViewModel.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -424,7 +424,7 @@
 				0DD0AE7128D10DC60092FE1F /* MainTitle.swift in Sources */,
 				0DD0AE7B28D10F960092FE1F /* UsernameForm.swift in Sources */,
 				0DD0AE7D28D10FD60092FE1F /* Welcome.swift in Sources */,
-				0D4DA8B928ED852D0027305C /* NetworkigModel.swift in Sources */,
+				0D4DA8B928ED852D0027305C /* NetworkingViewModel.swift in Sources */,
 				0D6FAFA628D4B0F000E09979 /* ResetPasswordCoordinator.swift in Sources */,
 				0DD0AE6C28D108870092FE1F /* RegistrationCoordinator.swift in Sources */,
 				0DD0AE7528D10E6A0092FE1F /* RedButton.swift in Sources */,

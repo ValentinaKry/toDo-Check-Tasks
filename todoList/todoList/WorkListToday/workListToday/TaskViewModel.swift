@@ -8,11 +8,11 @@ class TaskViewModel: ObservableObject {
     TaskModel(task: "Read the book Zlatan", time: "12:30 am", offset: 0, isCompleted: false, isSwipped: false)
     ]
 
-    func getSampleDate(offset: Int)-> Date {
-        let calender = Calendar.current
-
-        let date = calender.date(byAdding: .day, value: offset, to: Date())
-
-        return date ?? Date()
-    }
+//    func getSampleDate(offset: Int)-> Date {
+//        let calender = Calendar.current
+//
+//        let date = calender.date(byAdding: .day, value: offset, to: Date())
+//
+//        return date ?? Date()
+//    }
 }

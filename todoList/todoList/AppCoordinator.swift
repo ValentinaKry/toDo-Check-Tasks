@@ -1,12 +1,12 @@
-
-import Foundation
 import UIKit
+import Combine
 
 class AppCoordinator {
     
     var window: UIWindow
     var navigationController = UINavigationController()
     var childsCoordinators = [Any]()
+    var cancellables = Set<AnyCancellable>()
 
     init (window: UIWindow) {
         self.window = window
@@ -21,9 +21,10 @@ class AppCoordinator {
         let flow1 = OnboardingCoordinator(rootNavigation: navigationController)
         flow1.start()
         childsCoordinators.append(flow1)
-        flow1.flowEnd = {
+        flow1.flowEnd
+            .sink{
             self.showRegistrationFlow()
-        }
+            }.store(in: &cancellables)
     }
 
     func showRegistrationFlow() {

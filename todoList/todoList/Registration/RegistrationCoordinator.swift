@@ -1,5 +1,6 @@
 import UIKit
-import SwiftUI
+import Combine
+
 final class RegistrationCoordinator {
     let rootNavigation: UINavigationController
     var endFlow: (() -> Void)?

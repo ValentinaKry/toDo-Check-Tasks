@@ -1,9 +1,10 @@
 import UIKit
 import SwiftUI
 import Combine
+
 final class OnboardingCoordinator {
     let rootNavigation: UINavigationController
-    var flowEnd: (() -> Void)?
+    var flowEnd = PassthroughSubject<Void, Never>()
     var cancellables = Set<AnyCancellable>()
 
     init(rootNavigation: UINavigationController) {
@@ -14,7 +15,7 @@ final class OnboardingCoordinator {
         let viewModel = OnboardingViewModel()
         let view = UIHostingController(rootView: OnboardingView(model: viewModel))
         viewModel.onTapSubject
-            .sink { self.flowEnd?() }
+            .sink { self.flowEnd.send() }
         .store(in: &cancellables)
 
         rootNavigation.pushViewController(view, animated: false)

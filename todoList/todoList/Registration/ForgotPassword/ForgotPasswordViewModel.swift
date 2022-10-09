@@ -1,9 +1,10 @@
 
-import Foundation
+import UIKit
+import Combine
 
 final class ForgotPasswordViewModel: ObservableObject {
-    var onTap : (() -> Void)?
+    var onTapSubject = PassthroughSubject<Void, Never>()
     func sendRequest () {
-        onTap?()
+        onTapSubject.send()
     }
 }
