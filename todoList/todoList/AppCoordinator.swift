@@ -13,9 +13,6 @@ class AppCoordinator {
         window.makeKeyAndVisible()
         window.rootViewController = navigationController
     }
-    deinit {
-        print(#function)
-    }
 
     func start () {
         let flow1 = OnboardingCoordinator(rootNavigation: navigationController)
@@ -31,12 +28,12 @@ class AppCoordinator {
         let flow2 = RegistrationCoordinator(rootNavigation: navigationController)
         flow2.start()
         childsCoordinators.append(flow2)
-        flow2.endFlow = {
-            self.gotoWorkList()
-        }
-        flow2.endSignIn = {
-            self.gotoWorkList()
-        }
+        flow2.endFlow
+            .sink{self.gotoWorkList()}
+            .store(in: &cancellables)
+        flow2.endSignIn
+            .sink{self.gotoWorkList()}
+            .store(in: &cancellables)
         
     }
 

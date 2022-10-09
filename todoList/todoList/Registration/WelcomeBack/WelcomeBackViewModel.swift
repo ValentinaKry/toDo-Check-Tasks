@@ -5,7 +5,7 @@ import Combine
 class WelcomeBackViewModel: ObservableObject {
 
     var signUpTapped = PassthroughSubject<Void, Never>()
-    var signInTaped = PassthroughSubject<Void, Never>()
+    var signInTapped = PassthroughSubject<Void, Never>()
     var passwordTap = PassthroughSubject<Void, Never>()
 
     func signUpTap () {
@@ -13,7 +13,7 @@ class WelcomeBackViewModel: ObservableObject {
     }
 
     func signInTap () {
-        signInTaped.send()
+        signInTapped.send()
     }
 
     func forgotPassword () {
