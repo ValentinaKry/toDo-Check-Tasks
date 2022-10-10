@@ -9,8 +9,8 @@ struct WelcomeBack: View {
 
         VStack {
             MainTitle(firstTitle: "Welcome back", description: "Sign in to continue")
-//            UsernameForm()
-//            PasswordForm()
+            UsernameForm(name: $viewModel.email)
+            PasswordForm(password: $viewModel.password)
             Button  {
                 hideKeyboard()
                 viewModel.forgotPassword()

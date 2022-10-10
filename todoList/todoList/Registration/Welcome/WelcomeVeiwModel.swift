@@ -3,9 +3,9 @@ import Combine
 
 class WelcomeViewModel: ObservableObject {
     let networkManager = NetworkingViewModel()
-    private var cancellables = Set<AnyCancellable>()
     @Published var email = ""
     @Published var password = ""
+    private var cancellables = Set<AnyCancellable>()
     var model: Body {
         Body(email: email, password: password)
     }

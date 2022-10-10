@@ -1,5 +1,3 @@
-
-
 import SwiftUI
 
 struct CustomDatePicker: View {
@@ -14,29 +12,6 @@ struct CustomDatePicker: View {
             //Days
             let days: [String] =
             ["S", "M", "T", "W", "T", "F", "S"]
-
-            HStack (spacing: 20){
-
-                HStack (alignment: .center, spacing: 10) {
-                    Text(extraDate()[1])
-                    Text(extraDate()[0])
-                }
-                .font(.custom("Roboto-ThinItalic", size: 14))
-                .foregroundColor(Color("Gray"))
-
-                Button {
-//                    withAnimation {
-//                        currentMonth += 1
-//                    }
-
-                } label: {
-                    Image(systemName: "chevron.up")
-                        .font(.title3)
-                        .foregroundColor(Color("Black"))
-                }
-
-            }
-            .padding(.horizontal)
 
             //Day View
             HStack(spacing: 0) {
@@ -69,6 +44,9 @@ struct CustomDatePicker: View {
                         }
                 }
             }
+//            withAnimation {
+//                currentMonth += 1
+//            }
             .padding(.horizontal)
             .background(.white)
             .frame(maxWidth: .infinity)
@@ -76,20 +54,7 @@ struct CustomDatePicker: View {
             .cornerRadius(5)
             .shadow(color: .gray.opacity(0.1), radius: 1, x: 0, y: 5)
 
-            VStack(spacing: 15) {
-
-                if let task = tasks.first(where: { task in
-                    return isSameDay(date1: task.taskDate, date2: currentDate)
-                }) {
-                   WorkListToday_View()
-                }
-                else {
-                    Text("No Task Found")
-                }
-            }
-            .padding()
         }
-
         .onChange(of: currentMonth) { newValue in
             currentDate = getCurrentMonth()
         }
@@ -202,5 +167,32 @@ extension Date {
 
             return calendar.date(byAdding: .day, value: day - 1 , to: startDate)!
         }
+    }
+}
+
+struct EverydayTask: View {
+    @Binding var currentDate: Date
+    var body: some View {
+        VStack(spacing: 15) {
+
+            if let task = tasks.first(where: { task in
+                return isSameDay(date1: task.taskDate, date2: currentDate)
+            }) {
+                WorkListToday_View()
+            }
+            else {
+                Text("No Task Found")
+                    .font(.custom("Roboto-Medium", size: 14))
+                    .foregroundColor(Color("Black"))
+            }
+        }
+        .padding()
+    }
+
+    func isSameDay(date1: Date, date2: Date) -> Bool {
+        let calendar = Calendar.current
+
+        return calendar.isDate(date1, inSameDayAs: date2)
+
     }
 }

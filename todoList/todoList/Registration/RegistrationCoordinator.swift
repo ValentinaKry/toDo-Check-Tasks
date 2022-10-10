@@ -4,7 +4,6 @@ import Combine
 final class RegistrationCoordinator {
     let rootNavigation: UINavigationController
     private var cancellables = Set<AnyCancellable>()
-    
     var endFlow  = PassthroughSubject<Void, Never>()
     var endSignIn  = PassthroughSubject<Void, Never>()
 
@@ -41,6 +40,4 @@ final class RegistrationCoordinator {
         let flow3 = ForgotPasswordCoordinator(rootNavigation: rootNavigation)
         flow3.start()
     }
-
-
 }

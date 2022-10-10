@@ -11,6 +11,7 @@ struct WorkListToday_View: View {
             Spacer()
             Text("TODAY, " + date.formatted(.dateTime.day().month())
                  + "/" + date.formatted(.dateTime.year()))
+                .textCase(.uppercase)
                 .font(.custom("Roboto-ThinItalic", size: 16))
                 .foregroundColor(Color.init("Gray"))
                 .padding(.horizontal)

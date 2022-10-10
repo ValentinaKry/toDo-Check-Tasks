@@ -51,7 +51,6 @@ struct TaskView: View {
                         .foregroundColor(task.isCompleted ? Color.init("Red") : Color.init("Blue"))
                 }
 
-
                 VStack(alignment: .leading, spacing: 7) {
 
                     Text(task.task)

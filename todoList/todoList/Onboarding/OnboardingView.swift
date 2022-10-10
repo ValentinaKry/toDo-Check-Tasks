@@ -5,6 +5,7 @@ struct OnboardingView: View {
         // MARK: - Variables
     @State private var currentIndex = 0
     @ObservedObject var model: OnboardingViewModel
+    var doneRequested: () -> ()
     
     private let screens: [OnboardView] = [
         OnboardView(imageName: "Screen1",
@@ -120,7 +121,7 @@ struct OnboardView: View {
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         let view  = OnboardingViewModel()
-        OnboardingView(model: view)
+        OnboardingView(model: view, doneRequested: { })
     }
 }
 
