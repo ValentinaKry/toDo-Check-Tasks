@@ -45,7 +45,7 @@ struct Welcome: View {
             .padding(.top, 70)
         }
 
-        .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(false)
         .navigationBarItems(leading: Button(action : {
             self.mode.wrappedValue.dismiss()
         }){
