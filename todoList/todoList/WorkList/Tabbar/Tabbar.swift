@@ -59,7 +59,6 @@ struct Tabbar: View {
                         .offset(x: 8, y: -25)
 
                 }
-
             }
         }
         .navigationBarHidden(true)

@@ -1,22 +1,11 @@
 
 import SwiftUI
 
-extension AnyTransition {
-    static var moveAndFade: AnyTransition {
-        .asymmetric(
-            insertion: .move(edge: .trailing).combined(with: .opacity),
-            removal: .scale.combined(with: .opacity)
-        )
-    }
-}
-
-
 struct WorkListMonth_View: View {
     @State var currentDate: Date = Date()
     @State private var showMonth = false
     var body: some View {
         VStack (spacing: 15){
-            NavBar()
             ScrollView(.vertical, showsIndicators: false) {
                 HStack (spacing: 20){
 
@@ -40,8 +29,8 @@ struct WorkListMonth_View: View {
                             .padding()
                             .animation(.easeInOut, value: showMonth)
                     }
-
                 }
+
                 .padding(.horizontal)
                 if showMonth {
                     VStack(spacing: 20) {
@@ -56,9 +45,6 @@ struct WorkListMonth_View: View {
             }
             EverydayTask(currentDate: $currentDate)
 
-
-
-            Tabbar()
         }
     }
 

@@ -5,13 +5,9 @@ struct NavbarWorkListToday_View: View {
     var body: some View {
         VStack {
             NavBar()
-
             Spacer()
 
-            WorkListToday_View()
-
             Tabbar()
-
         }
     }
 }
@@ -48,7 +44,7 @@ struct NavBar: View {
             HStack {
                 Button  {
                     self.selectedIndex = 0
-                   // WorkListToday_View()
+
                 } label: {
                     VStack {
                         Text("Today")
@@ -71,7 +67,6 @@ struct NavBar: View {
 
                 Button {
                     self.selectedIndex = 1
-                    //WorkListMonth_View()
                 } label: {
                     VStack {
                         Text("Month")
@@ -89,11 +84,17 @@ struct NavBar: View {
                         }
                     }
                 }
-
             }
             .padding(.horizontal, 68)
         }
         .edgesIgnoringSafeArea(.bottom)
         .background(Color.init("Red"))
+        
+        switch selectedIndex {
+        case 0 : WorkListToday_View()
+        case 1 : WorkListMonth_View()
+        default: WorkListToday_View()
+
+        }
     }
 }

@@ -12,8 +12,8 @@ struct WorkListToday_View: View {
             Text("TODAY, " + date.formatted(.dateTime.day().month())
                  + "/" + date.formatted(.dateTime.year()))
                 .textCase(.uppercase)
-                .font(.custom("Roboto-ThinItalic", size: 16))
-                .foregroundColor(Color.init("Gray"))
+                .font(.custom("Roboto-ThinItalic", size: 14))
+                .foregroundColor(Color.init("Black"))
                 .padding(.horizontal)
 
             ScrollView(.vertical, showsIndicators: false) {
