@@ -44,9 +44,7 @@ struct CustomDatePicker: View {
                         }
                 }
             }
-//            withAnimation {
-//                currentMonth += 1
-//            }
+
             .padding(.horizontal)
             .background(.white)
             .frame(maxWidth: .infinity)
@@ -55,6 +53,8 @@ struct CustomDatePicker: View {
             .shadow(color: .gray.opacity(0.1), radius: 1, x: 0, y: 5)
 
         }
+        EverydayTask(currentDate: $currentDate)
+        //MARK: HEREEEE!!!! TASK!!!
         .onChange(of: currentMonth) { newValue in
             currentDate = getCurrentMonth()
         }

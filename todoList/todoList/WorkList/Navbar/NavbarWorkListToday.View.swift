@@ -6,7 +6,6 @@ struct NavbarWorkListToday_View: View {
         VStack {
             NavBar()
             Spacer()
-
             Tabbar()
         }
     }
