@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D1A52BD2900093500B0B948 /* WebServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1A52BC2900093500B0B948 /* WebServiceModel.swift */; };
+		0D1A52BF2902D9F500B0B948 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1A52BE2902D9F500B0B948 /* SignUpModel.swift */; };
 		0D40DCC528DD8CC800EE7483 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D40DCC428DD8CC800EE7483 /* Task.swift */; };
-		0D4DA8B928ED852D0027305C /* NetworkingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DA8B828ED852D0027305C /* NetworkingViewModel.swift */; };
+		0D4DA8B928ED852D0027305C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DA8B828ED852D0027305C /* NetworkManager.swift */; };
 		0D4DA8BB28F417C20027305C /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DA8BA28F417C20027305C /* WeekView.swift */; };
 		0D4DA8D928F6D2FB0027305C /* NavbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DA8D828F6D2FB0027305C /* NavbarViewModel.swift */; };
 		0D4DA8DB28F6D3150027305C /* NavbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DA8DA28F6D3150027305C /* NavbarCoordinator.swift */; };
@@ -68,8 +70,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D1A52BC2900093500B0B948 /* WebServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceModel.swift; sourceTree = "<group>"; };
+		0D1A52BE2902D9F500B0B948 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		0D40DCC428DD8CC800EE7483 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		0D4DA8B828ED852D0027305C /* NetworkingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingViewModel.swift; sourceTree = "<group>"; };
+		0D4DA8B828ED852D0027305C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0D4DA8BA28F417C20027305C /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		0D4DA8D828F6D2FB0027305C /* NavbarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarViewModel.swift; sourceTree = "<group>"; };
 		0D4DA8DA28F6D3150027305C /* NavbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarCoordinator.swift; sourceTree = "<group>"; };
@@ -141,10 +145,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D1A52B528FEA2B200B0B948 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				0D1A52BC2900093500B0B948 /* WebServiceModel.swift */,
+				0D1A52BE2902D9F500B0B948 /* SignUpModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		0D4DA8B628ED85070027305C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				0D4DA8B828ED852D0027305C /* NetworkingViewModel.swift */,
+				0D4DA8B828ED852D0027305C /* NetworkManager.swift */,
+				0D1A52B528FEA2B200B0B948 /* Models */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -427,6 +441,7 @@
 			files = (
 				0DD0AE7928D10F4A0092FE1F /* ForgotPasswordLabel.swift in Sources */,
 				0D6FAFB528D9DBC700E09979 /* WorkListMonth.View.swift in Sources */,
+				0D1A52BD2900093500B0B948 /* WebServiceModel.swift in Sources */,
 				0D6FAFAB28D85F5A00E09979 /* WorkListToday.View.swift in Sources */,
 				0DD0AE7328D10E1D0092FE1F /* PasswordForm.swift in Sources */,
 				0D4DA8DB28F6D3150027305C /* NavbarCoordinator.swift in Sources */,
@@ -442,13 +457,14 @@
 				0DD0AE7128D10DC60092FE1F /* MainTitle.swift in Sources */,
 				0DD0AE7B28D10F960092FE1F /* UsernameForm.swift in Sources */,
 				0DD0AE7D28D10FD60092FE1F /* Welcome.swift in Sources */,
-				0D4DA8B928ED852D0027305C /* NetworkingViewModel.swift in Sources */,
+				0D4DA8B928ED852D0027305C /* NetworkManager.swift in Sources */,
 				0D6FAFA628D4B0F000E09979 /* ResetPasswordCoordinator.swift in Sources */,
 				0DD0AE6C28D108870092FE1F /* RegistrationCoordinator.swift in Sources */,
 				0D4DA8D928F6D2FB0027305C /* NavbarViewModel.swift in Sources */,
 				0DD0AE7528D10E6A0092FE1F /* RedButton.swift in Sources */,
 				0DA6A64E28D05DB300AF6FB9 /* ViewController.swift in Sources */,
 				0D6FAFB828DB3C2200E09979 /* CustomDatePicker.swift in Sources */,
+				0D1A52BF2902D9F500B0B948 /* SignUpModel.swift in Sources */,
 				0D6FAF9C28D4654500E09979 /* TabbarCoordinator.swift in Sources */,
 				0DA6A64A28D05DB300AF6FB9 /* AppDelegate.swift in Sources */,
 				0D4DA8BB28F417C20027305C /* WeekView.swift in Sources */,

@@ -7,6 +7,7 @@ class AppCoordinator {
     var navigationController = UINavigationController()
     var childsCoordinators = [Any]()
     var cancellables = Set<AnyCancellable>()
+    
     init (window: UIWindow) {
         self.window = window
         window.makeKeyAndVisible()

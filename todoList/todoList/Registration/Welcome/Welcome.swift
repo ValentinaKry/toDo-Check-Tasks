@@ -22,7 +22,10 @@ struct Welcome: View {
 
             UsernameForm(name: $viewModel.email)
                 .padding(.bottom, 5)
+            //исправить одинаковость
+            UsernameForm(name: $viewModel.username)
             PasswordForm(password: $viewModel.password)
+
 
             VStack(spacing: 60) {
                 Button {

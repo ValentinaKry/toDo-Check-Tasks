@@ -18,8 +18,7 @@ struct WeekView: View {
                         Text(taskModel.extractDate(date: day, format: "dd"))
 
                             .fontWeight(.semibold)
-
-
+                        
                         Circle()
                             .fill(.white)
                             .frame(width: 8, height: 8)

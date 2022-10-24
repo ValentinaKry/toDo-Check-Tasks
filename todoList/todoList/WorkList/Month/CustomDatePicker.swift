@@ -2,13 +2,14 @@ import SwiftUI
 
 struct CustomDatePicker: View {
     @Binding var currentDate: Date
+    @Binding var isShowing: Bool
+    //@Binding var tasks: TaskModel
     let date = Date()
 
     // Month update on arrow button clicks
     @State var currentMonth: Int = 0
     var body: some View {
         VStack(spacing: 15) {
-
             //Days
             let days: [String] =
             ["S", "M", "T", "W", "T", "F", "S"]
@@ -54,7 +55,6 @@ struct CustomDatePicker: View {
 
         }
         EverydayTask(currentDate: $currentDate)
-        //MARK: HEREEEE!!!! TASK!!!
         .onChange(of: currentMonth) { newValue in
             currentDate = getCurrentMonth()
         }
@@ -171,6 +171,7 @@ extension Date {
 }
 
 struct EverydayTask: View {
+    //@Binding var tasks: TaskModel
     @Binding var currentDate: Date
     var body: some View {
         VStack(spacing: 15) {

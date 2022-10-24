@@ -3,7 +3,7 @@ import UIKit
 import Combine
 
 final class ForgotPasswordViewModel: ObservableObject {
-    let networkManager = NetworkingViewModel()
+    let networkManager = NetworkManager()
     @Published var email = ""
     @Published var password = ""
     var onTapSubject = PassthroughSubject<Void, Never>()

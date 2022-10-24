@@ -18,9 +18,10 @@ struct WorkListMonth_View: View {
                     .foregroundColor(Color("Black"))
                     
                     Button {
-                        
-                        showMonth.toggle()
-                        
+                        withAnimation (.spring()){
+                            showMonth.toggle()
+                        }
+
                     } label: {
                         Image(systemName: "chevron.down")
                             .font(.title3)
@@ -34,18 +35,14 @@ struct WorkListMonth_View: View {
                 .padding(.horizontal)
                 if showMonth {
                     VStack(spacing: 20) {
-                        CustomDatePicker(currentDate: $currentDate)
-                            .transition(.slide)
+                        CustomDatePicker(currentDate: $currentDate, isShowing: .constant(true))
                     }
                     .padding(.vertical)
                 } else {
-                    
                     WeekView()
+
                 }
-                
             }
-                //EverydayTask(currentDate: $currentDate)
-            
         }
     }
     

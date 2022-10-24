@@ -26,11 +26,11 @@ var tasks : [TaskMetaData] = [
         Task(title: "Talk to iJustine", offset: 0 , isCompleted: true, isSwipped: false),
         Task(title: "iPhome 13 Great Design Change😂" , offset: 0 , isCompleted: true, isSwipped: false),
         Task(title: "Nothing Much Workout !!!" , offset: 0 , isCompleted: true, isSwipped: false)
-    ], taskDate: getSampleDate(offset: 1)),
+    ], taskDate: .now),
 
     TaskMetaData(task: [
         Task(title: "Talk to Jenna Ezarik", offset: 0 , isCompleted: true, isSwipped: false)
-    ], taskDate: getSampleDate(offset: -3)),
+    ], taskDate: .now),
 
     TaskMetaData(task: [
         Task(title: "Metting with Tim Cook", offset: 0 , isCompleted: true, isSwipped: false)

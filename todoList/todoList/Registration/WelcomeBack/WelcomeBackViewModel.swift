@@ -6,7 +6,7 @@ class WelcomeBackViewModel: ObservableObject {
     var signUpTapped = PassthroughSubject<Void, Never>()
     var signInTapped = PassthroughSubject<Void, Never>()
     var passwordTap = PassthroughSubject<Void, Never>()
-    let networkManager = NetworkingViewModel()
+    let networkManager = NetworkManager()
     @Published var email = ""
     @Published var password = ""
 
