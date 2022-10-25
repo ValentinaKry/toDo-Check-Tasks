@@ -1,12 +1,22 @@
 
 import SwiftUI
+import Combine
 
 struct NavbarWorkListToday_View: View {
+    @State private var showFilter = false
+
     var body: some View {
-        VStack {
-            NavBar()
-            Spacer()
-            Tabbar()
+        ZStack {
+            VStack {
+                NavBar {
+                    withAnimation(.spring(response: 0.5, dampingFraction:  0.6, blendDuration: 0)) {
+                        showFilter = true
+                    }
+                }
+                Spacer()
+                Tabbar()
+            }
+            Filter(isShowing: $showFilter)
         }
     }
 }
@@ -19,6 +29,7 @@ struct NavbarWorkListToday_View_Previews: PreviewProvider {
 
 struct NavBar: View {
     @State var selectedIndex = 0
+    var tap : () -> ()
     var body: some View {
         VStack {
             HStack {
@@ -29,7 +40,7 @@ struct NavBar: View {
                 Spacer()
 
                 Button  {
-
+                    tap()
                 } label: {
                     Image(systemName: "slider.horizontal.3")
                         .foregroundColor(.white)

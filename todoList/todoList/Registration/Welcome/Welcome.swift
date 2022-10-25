@@ -8,8 +8,8 @@ struct Welcome: View {
 
     var body: some View {
 
-        VStack {
-            
+        VStack{
+
             MainTitle(firstTitle: "Welcome", description: "Sign up to continue")
             Button {
 
@@ -20,12 +20,10 @@ struct Welcome: View {
                 .frame(width: 107, height: 104)
             }
 
-            UsernameForm(name: $viewModel.email)
+            UsernameForm(name: $viewModel.email, title: "Username", textField: "Enter your username")
                 .padding(.bottom, 5)
-            //исправить одинаковость
-            UsernameForm(name: $viewModel.username)
+            UsernameForm(name: $viewModel.username, title: "Email", textField: "Enter your email")
             PasswordForm(password: $viewModel.password)
-
 
             VStack(spacing: 60) {
                 Button {
@@ -45,7 +43,7 @@ struct Welcome: View {
                 Spacer()
 
             }
-            .padding(.top, 70)
+            .padding(.top, 10)
         }
 
         .navigationBarBackButtonHidden(false)
@@ -60,15 +58,11 @@ struct Welcome: View {
             if(value.startLocation.x < 20 && value.translation.width > 100) {
                 self.mode.wrappedValue.dismiss()
             }
-
         }))
         .onTapGesture {
             hideKeyboard()
         }
-
-
     }
-
 }
 
 struct Welcome_Previews: PreviewProvider {

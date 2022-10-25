@@ -46,8 +46,6 @@ class NetworkManager: ObservableObject {
             .decode(type: U.self, decoder: decoder)
             .mapError{ error -> NetworkRequestError in
                 return NetworkRequestError.badRequest
-
-               // self.handleError(error)
             }
             .eraseToAnyPublisher()
     }
@@ -73,7 +71,56 @@ class NetworkManager: ObservableObject {
             .eraseToAnyPublisher()
     }
 
-    //func delete func put
+    func delete<U> (path: String, header: String?) -> AnyPublisher<U, NetworkRequestError> where U : Decodable {
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        let url = URL(string: BaseURL.authorization.rawValue + path)
+        var request = URLRequest(url: url!)
+
+        request.httpMethod = Method.delete.rawValue
+
+        if header != nil {
+            request.setValue(header, forHTTPHeaderField: "Authorization")
+        }
+
+        return session.dataTaskPublisher(for: request)
+            .receive(on: DispatchQueue.main)
+            .map{ $0.data }
+            .decode(type: U.self, decoder: decoder)
+            .mapError{ error in
+                self.handleError(error)
+            }
+            .eraseToAnyPublisher()
+
+    }
+
+    func put <T, U>(body: T, path: String, header: String?) -> AnyPublisher<U, NetworkRequestError> where T : Encodable, U : Decodable {
+
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        encoder.keyEncodingStrategy = .convertToSnakeCase
+        encoder.outputFormatting = .prettyPrinted
+
+        let jsonData = try? encoder.encode(body)
+
+        let url = URL(string: BaseURL.authorization.rawValue + path)
+        var request = URLRequest(url: url!)
+        request.httpMethod = Method.put.rawValue
+        request.httpBody = jsonData
+        request.setValue("\(String(describing: jsonData?.count))", forHTTPHeaderField: "Content-Length")
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        if header != nil {
+            request.setValue(header, forHTTPHeaderField: "Authorization")
+        }
+
+        return session.dataTaskPublisher(for: request)
+            .receive(on: DispatchQueue.main)
+            .map{ $0.data }
+            .decode(type: U.self, decoder: decoder)
+            .mapError{ error -> NetworkRequestError in
+                return NetworkRequestError.badRequest
+            }
+            .eraseToAnyPublisher()
+    }
 }
 
 extension NetworkManager {

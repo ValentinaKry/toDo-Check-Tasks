@@ -9,7 +9,7 @@ struct WelcomeBack: View {
 
         VStack {
             MainTitle(firstTitle: "Welcome back", description: "Sign in to continue")
-            UsernameForm(name: $viewModel.email)
+            UsernameForm(name: $viewModel.email, title: "Username", textField: "Enter your username")
             PasswordForm(password: $viewModel.password)
             Button  {
                 hideKeyboard()
@@ -38,7 +38,7 @@ struct WelcomeBack: View {
 
                 Spacer()
             }
-            .padding(.top, 60)
+            .padding(.top)
 
         }
         .navigationBarBackButtonHidden(true)

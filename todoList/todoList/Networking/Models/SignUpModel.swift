@@ -7,12 +7,17 @@ struct Body: Codable {
 }
 
 struct Response: Codable {
-    let data: Data
+    let id: String
+    let email: String
+    let avatarUrl: Bool
+    let userSession: UserSession
 }
-//Модель взять и написать
-struct Data: Codable {
-    let access_token: String?
-    let token_type: String?
-    let refresh_token: String?
-    let expires_in: Int?
+
+struct UserSession: Codable {
+    let accessToken: String?
+    let tokenType: String?
+    let refreshToken: String?
+    let expiresIn: Int?
 }
+
+
