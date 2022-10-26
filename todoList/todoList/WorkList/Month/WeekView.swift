@@ -45,7 +45,6 @@ struct WeekView: View {
                             taskModel.currentDay = day
                         }
                     }
-
                 }
             }
              .padding(.horizontal)

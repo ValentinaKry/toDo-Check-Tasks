@@ -1,12 +1,12 @@
 
 import SwiftUI
+import Combine
 
 struct Filter: View {
     @Binding var isShowing : Bool
     @State var selectedIndex = 0
-//    var todoFiltered : [TaskModel] {
-//
-//    }
+    var items = TaskViewModel()
+    
     var body: some View {
         ZStack {
             if isShowing {
@@ -28,10 +28,10 @@ struct Filter: View {
 
                                 Image(systemName: "checkmark")
                                 .foregroundColor(selectedIndex == 0  ? .green : .white)
-
                         }
                     }
 
+                    Text("\(items.items.filter($0.isCompleted).count)")
                     Button {
                         selectedIndex = 1
                     } label: {
@@ -74,6 +74,8 @@ struct Filter: View {
         .ignoresSafeArea()
         .animation(.easeInOut)
     }
+
+
 }
 
 struct Filter_Previews: PreviewProvider {
@@ -81,3 +83,4 @@ struct Filter_Previews: PreviewProvider {
         NavbarWorkListToday_View()
     }
 }
+

@@ -179,7 +179,7 @@ struct EverydayTask: View {
             if let task = tasks.first(where: { task in
                 return isSameDay(date1: task.taskDate, date2: currentDate)
             }) {
-                WorkListToday_View()
+                    WorkListToday_View()
             }
             else {
                 Text("No Task Found")

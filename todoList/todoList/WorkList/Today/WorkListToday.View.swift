@@ -5,26 +5,33 @@ struct WorkListToday_View: View {
     @StateObject var viewModel = TaskViewModel()
     let date = Date()
 
-
     var body: some View {
+
         VStack (alignment: .leading, spacing: 5){
             Spacer()
             Text("TODAY, " + date.formatted(.dateTime.day().month())
                  + "/" + date.formatted(.dateTime.year()))
-                .textCase(.uppercase)
-                .font(.custom("Roboto-ThinItalic", size: 14))
-                .foregroundColor(Color.init("Black"))
-                .padding(.horizontal)
+            .textCase(.uppercase)
+            .font(.custom("Roboto-ThinItalic", size: 14))
+            .foregroundColor(Color.init("Black"))
+            .padding(.horizontal)
 
-            ScrollView(.vertical, showsIndicators: false) {
-                LazyVStack(spacing: 0) {
-                    ForEach(viewModel.items) { item in
-                        TaskView(task: $viewModel.items[getIndex(tasks: item)],
-                                 tasks: $viewModel.items)
+            List(0..<1) { item in
+                ScrollView(.vertical, showsIndicators: false) {
+                    LazyVStack(spacing: 0) {
+                        ForEach(viewModel.items) { item in
+                            TaskView(task: $viewModel.items[getIndex(tasks: item)],
+                                     tasks: $viewModel.items)
+                        }
                     }
                 }
+                .listRowSeparator(.hidden)
             }
+
+
+            .listStyle(.plain)
         }
+     //   Text("\(viewModel.items.filter($0.isCompleted).count)")
     }
 
     func getIndex(tasks: TaskModel) -> Int {

@@ -7,8 +7,7 @@ struct TaskView: View {
     
     var body: some View {
 
-        ZStack {
-
+        ZStack { 
             Color.white
             HStack {
                 Spacer()
