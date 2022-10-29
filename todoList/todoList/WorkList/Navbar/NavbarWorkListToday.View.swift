@@ -14,7 +14,7 @@ struct NavbarWorkListToday_View: View {
                     }
                 }
                 Spacer()
-                Tabbar()
+                
             }
             Filter(isShowing: $showFilter)
         }

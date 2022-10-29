@@ -11,7 +11,7 @@ final class TabbarCoordinator {
     }
 
     func start () {
-        let view = UIHostingController (rootView: NavbarWorkListToday_View())
+        let view = UIHostingController (rootView: Tabbar())
         rootNavigation.pushViewController(view, animated: true)
     }
 }

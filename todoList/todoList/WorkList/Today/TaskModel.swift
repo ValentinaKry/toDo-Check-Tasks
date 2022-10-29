@@ -10,3 +10,11 @@ struct TaskModel : Identifiable, Codable {
     var isSwipped: Bool
     var taskDate: Date
 }
+
+//enum TaskCompeted: Bool, CaseIterable {
+//    typealias RawValue = Bool
+//
+//
+//    case done = true
+//    case notDone = false
+//}

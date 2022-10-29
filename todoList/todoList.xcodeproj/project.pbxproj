@@ -19,6 +19,10 @@
 		0D4DA8DB28F6D3150027305C /* NavbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DA8DA28F6D3150027305C /* NavbarCoordinator.swift */; };
 		0D6EDF932907D4CB007296AE /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6EDF922907D4CB007296AE /* AddProjectView.swift */; };
 		0D6EDFB529081888007296AE /* Filter-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6EDFB429081888007296AE /* Filter-ViewModel.swift */; };
+		0D6EDFBA290A72EE007296AE /* QuickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6EDFB9290A72EE007296AE /* QuickView.swift */; };
+		0D6EDFBD290A886F007296AE /* ProjectItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6EDFBC290A886F007296AE /* ProjectItem.swift */; };
+		0D6EDFBF290A8BB9007296AE /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6EDFBE290A8BB9007296AE /* ProjectModel.swift */; };
+		0D6EDFC5290AA250007296AE /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6EDFC4290AA250007296AE /* ProjectViewModel.swift */; };
 		0D6FAF9028D32E4900E09979 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6FAF8F28D32E4900E09979 /* WelcomeCoordinator.swift */; };
 		0D6FAF9228D32EB600E09979 /* WelcomeVeiwModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6FAF9128D32EB500E09979 /* WelcomeVeiwModel.swift */; };
 		0D6FAF9528D334AA00E09979 /* WelcomeBackCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6FAF9428D334AA00E09979 /* WelcomeBackCoordinator.swift */; };
@@ -39,7 +43,6 @@
 		0D6FAFBA28DB7A0300E09979 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6FAFB928DB7A0300E09979 /* DateValue.swift */; };
 		0DA6A64A28D05DB300AF6FB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6A64928D05DB300AF6FB9 /* AppDelegate.swift */; };
 		0DA6A64C28D05DB300AF6FB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6A64B28D05DB300AF6FB9 /* SceneDelegate.swift */; };
-		0DA6A64E28D05DB300AF6FB9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6A64D28D05DB300AF6FB9 /* ViewController.swift */; };
 		0DA6A65328D05DB400AF6FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6A65228D05DB400AF6FB9 /* Assets.xcassets */; };
 		0DA6A65628D05DB400AF6FB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6A65428D05DB400AF6FB9 /* LaunchScreen.storyboard */; };
 		0DD0AE4728D06ACE0092FE1F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0AE4628D06ACE0092FE1F /* AppCoordinator.swift */; };
@@ -87,6 +90,10 @@
 		0D4DA8DA28F6D3150027305C /* NavbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarCoordinator.swift; sourceTree = "<group>"; };
 		0D6EDF922907D4CB007296AE /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 		0D6EDFB429081888007296AE /* Filter-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Filter-ViewModel.swift"; sourceTree = "<group>"; };
+		0D6EDFB9290A72EE007296AE /* QuickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickView.swift; sourceTree = "<group>"; };
+		0D6EDFBC290A886F007296AE /* ProjectItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectItem.swift; sourceTree = "<group>"; };
+		0D6EDFBE290A8BB9007296AE /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
+		0D6EDFC4290AA250007296AE /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
 		0D6FAF8F28D32E4900E09979 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
 		0D6FAF9128D32EB500E09979 /* WelcomeVeiwModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVeiwModel.swift; sourceTree = "<group>"; };
 		0D6FAF9428D334AA00E09979 /* WelcomeBackCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackCoordinator.swift; sourceTree = "<group>"; };
@@ -108,7 +115,6 @@
 		0DA6A64628D05DB300AF6FB9 /* todoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA6A64928D05DB300AF6FB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DA6A64B28D05DB300AF6FB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0DA6A64D28D05DB300AF6FB9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0DA6A65228D05DB400AF6FB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DA6A65528D05DB400AF6FB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DA6A65728D05DB400AF6FB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -184,6 +190,9 @@
 		0D1A52C92906AD0B00B0B948 /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				0D6EDFC3290AA22D007296AE /* ViewModel */,
+				0D6EDFC0290A8C10007296AE /* Model */,
+				0D6EDFBB290A8844007296AE /* Components */,
 				0D1A52CA2906AD2300B0B948 /* ProjectView.swift */,
 				0D6EDF922907D4CB007296AE /* AddProjectView.swift */,
 			);
@@ -205,9 +214,40 @@
 				0D6FAFA728D8561100E09979 /* Navbar */,
 				0DD9777F28E42D1E002E1896 /* Month */,
 				0D6FAFB628DB3B6F00E09979 /* Today */,
-				0DD0AE8628D1134F0092FE1F /* Tabbar */,
 			);
 			path = WorkList;
+			sourceTree = "<group>";
+		};
+		0D6EDFB8290A727D007296AE /* Quick */ = {
+			isa = PBXGroup;
+			children = (
+				0D6EDFB9290A72EE007296AE /* QuickView.swift */,
+			);
+			path = Quick;
+			sourceTree = "<group>";
+		};
+		0D6EDFBB290A8844007296AE /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				0D6EDFBC290A886F007296AE /* ProjectItem.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		0D6EDFC0290A8C10007296AE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D6EDFBE290A8BB9007296AE /* ProjectModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0D6EDFC3290AA22D007296AE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				0D6EDFC4290AA250007296AE /* ProjectViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		0D6FAF9328D3349400E09979 /* Welcome */ = {
@@ -307,10 +347,11 @@
 				0D4DA8B628ED85070027305C /* Networking */,
 				0DD0AE4828D06CFD0092FE1F /* Onboarding */,
 				0DD0AE6A28D108620092FE1F /* Registration */,
-				0D1A52C62906ACAB00B0B948 /* NewTask */,
-				0D1A52C92906AD0B00B0B948 /* Project */,
 				0D4DA8DC28F7F9B50027305C /* WorkList */,
-				0DA6A64D28D05DB300AF6FB9 /* ViewController.swift */,
+				0D1A52C92906AD0B00B0B948 /* Project */,
+				0D6EDFB8290A727D007296AE /* Quick */,
+				0D1A52C62906ACAB00B0B948 /* NewTask */,
+				0DD0AE8628D1134F0092FE1F /* Tabbar */,
 				0DA6A65228D05DB400AF6FB9 /* Assets.xcassets */,
 				0DA6A65428D05DB400AF6FB9 /* LaunchScreen.storyboard */,
 				0DA6A65728D05DB400AF6FB9 /* Info.plist */,
@@ -489,6 +530,7 @@
 				0D6FAFA128D472DB00E09979 /* ForgotPasswordCoordinator.swift in Sources */,
 				0D40DCC528DD8CC800EE7483 /* Task.swift in Sources */,
 				0D6EDF932907D4CB007296AE /* AddProjectView.swift in Sources */,
+				0D6EDFBF290A8BB9007296AE /* ProjectModel.swift in Sources */,
 				0DD0AE8828D113920092FE1F /* Tabbar.swift in Sources */,
 				0D1A52CB2906AD2300B0B948 /* ProjectView.swift in Sources */,
 				0D6EDFB529081888007296AE /* Filter-ViewModel.swift in Sources */,
@@ -500,13 +542,15 @@
 				0DD0AE7128D10DC60092FE1F /* MainTitle.swift in Sources */,
 				0DD0AE7B28D10F960092FE1F /* UsernameForm.swift in Sources */,
 				0DD0AE7D28D10FD60092FE1F /* Welcome.swift in Sources */,
+				0D6EDFBA290A72EE007296AE /* QuickView.swift in Sources */,
+				0D6EDFBD290A886F007296AE /* ProjectItem.swift in Sources */,
 				0D4DA8B928ED852D0027305C /* NetworkManager.swift in Sources */,
 				0D1A52C82906ACCC00B0B948 /* NewTaskView.swift in Sources */,
+				0D6EDFC5290AA250007296AE /* ProjectViewModel.swift in Sources */,
 				0D6FAFA628D4B0F000E09979 /* ResetPasswordCoordinator.swift in Sources */,
 				0DD0AE6C28D108870092FE1F /* RegistrationCoordinator.swift in Sources */,
 				0D4DA8D928F6D2FB0027305C /* NavbarViewModel.swift in Sources */,
 				0DD0AE7528D10E6A0092FE1F /* RedButton.swift in Sources */,
-				0DA6A64E28D05DB300AF6FB9 /* ViewController.swift in Sources */,
 				0D6FAFB828DB3C2200E09979 /* CustomDatePicker.swift in Sources */,
 				0D1A52BF2902D9F500B0B948 /* SignUpModel.swift in Sources */,
 				0D6FAF9C28D4654500E09979 /* TabbarCoordinator.swift in Sources */,

@@ -16,7 +16,7 @@ struct WorkListToday_View: View {
             .foregroundColor(Color.init("Black"))
             .padding(.horizontal)
 
-            List(0..<1) { item in
+//            List(0..<1) { item in
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVStack(spacing: 0) {
                         ForEach(viewModel.items) { item in
@@ -24,14 +24,13 @@ struct WorkListToday_View: View {
                                      tasks: $viewModel.items)
                         }
                     }
-                }
-                .listRowSeparator(.hidden)
+//                }
+//                .listRowSeparator(.hidden)
             }
 
 
-            .listStyle(.plain)
+//            .listStyle(.plain)
         }
-     //   Text("\(viewModel.items.filter($0.isCompleted).count)")
     }
 
     func getIndex(tasks: TaskModel) -> Int {

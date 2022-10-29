@@ -5,7 +5,7 @@ import Combine
 struct Filter: View {
     @Binding var isShowing : Bool
     @State var selectedIndex = 0
-    var items = TaskViewModel()
+    @StateObject var items = TaskViewModel()
     
     var body: some View {
         ZStack {
@@ -30,8 +30,8 @@ struct Filter: View {
                                 .foregroundColor(selectedIndex == 0  ? .green : .white)
                         }
                     }
-
-                    Text("\(items.items.filter($0.isCompleted).count)")
+                 //   Text("\(items.items)")
+//                    Text("\(items.items.filter($0.isCompleted).count)")
                     Button {
                         selectedIndex = 1
                     } label: {

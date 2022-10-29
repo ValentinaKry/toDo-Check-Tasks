@@ -2,9 +2,13 @@
 import SwiftUI
 
 struct AddProjectView: View {
+    @EnvironmentObject var projectVM: ProjectViewModel
+
     @Binding var isShowing : Bool
-    @State var projectTitle = ""
-    @State var selectedIndex = 0
+    @State private var projectTitle = ""
+    @State private var selectedIndex = 0
+    @State private var selectedColor: ProjectColor = ProjectColor.blue
+
     var colorArray = ["Blue", "Pink", "Green", "Ink", "Yellow"]
     var body: some View {
         ZStack {
@@ -33,7 +37,7 @@ struct AddProjectView: View {
                             Button  {
                                 self.selectedIndex = i
                             } label: {
-                                Text(projectTitle)
+                                Text("")
                                     .foregroundColor(.white)
                                     .font(.custom("Roboto-ThinItalic", size: 24))
                                     .frame(width: 48, height: 48)
@@ -44,6 +48,7 @@ struct AddProjectView: View {
                                             .foregroundColor(selectedIndex == i ? .white : Color(colorArray[i]))
                                     }
                             }
+                            .tag(i)
                         }
                     }
                     .padding(.horizontal)
@@ -52,14 +57,32 @@ struct AddProjectView: View {
                 .frame(width: 320, height: 240)
                 .background(.white)
                 .cornerRadius(5)
+                //try do add New Project
+                .onTapGesture{
+                    print("New Project")
+                    //savedProject()
+
+                }
             }
         }
     }
 }
 
 struct AddProjectView_Previews: PreviewProvider {
-    
+
     static var previews: some View {
         ProjectView()
+    }
+}
+
+extension AddProjectView {
+    private func savedProject() {
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-mm-dd"
+        let datePulished = dateFormatter.string(from: now)
+        print(datePulished)
+        let project = ProjectModel(title: projectTitle, color: colorArray[0], intItems: 0)
+        projectVM.addProject(project: project)
     }
 }
