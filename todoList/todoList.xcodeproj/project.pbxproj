@@ -23,6 +23,8 @@
 		0D6EDFBD290A886F007296AE /* ProjectItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6EDFBC290A886F007296AE /* ProjectItem.swift */; };
 		0D6EDFBF290A8BB9007296AE /* ProjectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6EDFBE290A8BB9007296AE /* ProjectModel.swift */; };
 		0D6EDFC5290AA250007296AE /* ProjectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6EDFC4290AA250007296AE /* ProjectViewModel.swift */; };
+		0D6EDFE3290E7B67007296AE /* FilterEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6EDFE2290E7B67007296AE /* FilterEnum.swift */; };
+		0D6EDFE7290E7C7A007296AE /* FilterTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6EDFE6290E7C7A007296AE /* FilterTask.swift */; };
 		0D6FAF9028D32E4900E09979 /* WelcomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6FAF8F28D32E4900E09979 /* WelcomeCoordinator.swift */; };
 		0D6FAF9228D32EB600E09979 /* WelcomeVeiwModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6FAF9128D32EB500E09979 /* WelcomeVeiwModel.swift */; };
 		0D6FAF9528D334AA00E09979 /* WelcomeBackCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6FAF9428D334AA00E09979 /* WelcomeBackCoordinator.swift */; };
@@ -94,6 +96,8 @@
 		0D6EDFBC290A886F007296AE /* ProjectItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectItem.swift; sourceTree = "<group>"; };
 		0D6EDFBE290A8BB9007296AE /* ProjectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModel.swift; sourceTree = "<group>"; };
 		0D6EDFC4290AA250007296AE /* ProjectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewModel.swift; sourceTree = "<group>"; };
+		0D6EDFE2290E7B67007296AE /* FilterEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterEnum.swift; sourceTree = "<group>"; };
+		0D6EDFE6290E7C7A007296AE /* FilterTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTask.swift; sourceTree = "<group>"; };
 		0D6FAF8F28D32E4900E09979 /* WelcomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCoordinator.swift; sourceTree = "<group>"; };
 		0D6FAF9128D32EB500E09979 /* WelcomeVeiwModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVeiwModel.swift; sourceTree = "<group>"; };
 		0D6FAF9428D334AA00E09979 /* WelcomeBackCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBackCoordinator.swift; sourceTree = "<group>"; };
@@ -213,7 +217,6 @@
 			children = (
 				0D6FAFA728D8561100E09979 /* Navbar */,
 				0DD9777F28E42D1E002E1896 /* Month */,
-				0D6FAFB628DB3B6F00E09979 /* Today */,
 			);
 			path = WorkList;
 			sourceTree = "<group>";
@@ -248,6 +251,15 @@
 				0D6EDFC4290AA250007296AE /* ProjectViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0D6EDFE5290E7B8B007296AE /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				0D6EDFE2290E7B67007296AE /* FilterEnum.swift */,
+				0D6EDFE6290E7C7A007296AE /* FilterTask.swift */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		0D6FAF9328D3349400E09979 /* Welcome */ = {
@@ -308,6 +320,7 @@
 				0D6FAFAE28D8754D00E09979 /* TaskView.swift */,
 				0D6FAFB228D8A32700E09979 /* TaskViewModel.swift */,
 				0D6FAFB028D8A31600E09979 /* TaskModel.swift */,
+				0D6EDFE5290E7B8B007296AE /* Filter */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -433,6 +446,7 @@
 				0D6FAFB428D9DBC700E09979 /* WorkListMonth.View.swift */,
 				0D6FAFB728DB3C2200E09979 /* CustomDatePicker.swift */,
 				0D4DA8BA28F417C20027305C /* WeekView.swift */,
+				0D6FAFB628DB3B6F00E09979 /* Today */,
 			);
 			path = Month;
 			sourceTree = "<group>";
@@ -523,6 +537,7 @@
 				0DD0AE7928D10F4A0092FE1F /* ForgotPasswordLabel.swift in Sources */,
 				0D6FAFB528D9DBC700E09979 /* WorkListMonth.View.swift in Sources */,
 				0D1A52BD2900093500B0B948 /* WebServiceModel.swift in Sources */,
+				0D6EDFE7290E7C7A007296AE /* FilterTask.swift in Sources */,
 				0D6FAFAB28D85F5A00E09979 /* WorkListToday.View.swift in Sources */,
 				0DD0AE7328D10E1D0092FE1F /* PasswordForm.swift in Sources */,
 				0D4DA8DB28F6D3150027305C /* NavbarCoordinator.swift in Sources */,
@@ -535,6 +550,7 @@
 				0D1A52CB2906AD2300B0B948 /* ProjectView.swift in Sources */,
 				0D6EDFB529081888007296AE /* Filter-ViewModel.swift in Sources */,
 				0D6FAFA428D4B0DE00E09979 /* ResetPasswordViewModel.swift in Sources */,
+				0D6EDFE3290E7B67007296AE /* FilterEnum.swift in Sources */,
 				0DD0AE8528D111110092FE1F /* Successful.swift in Sources */,
 				0D6FAFAF28D8754D00E09979 /* TaskView.swift in Sources */,
 				0D6FAF9028D32E4900E09979 /* WelcomeCoordinator.swift in Sources */,

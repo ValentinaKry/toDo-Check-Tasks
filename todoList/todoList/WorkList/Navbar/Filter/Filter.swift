@@ -19,6 +19,7 @@ struct Filter: View {
                 VStack (spacing: 20){
                     Button {
                         selectedIndex = 0
+                        filter = .complited
 
                     } label: {
                         HStack (spacing: 40){
@@ -32,8 +33,10 @@ struct Filter: View {
                     }
                  //   Text("\(items.items)")
 //                    Text("\(items.items.filter($0.isCompleted).count)")
+
                     Button {
                         selectedIndex = 1
+                        filter = .incomplited
                     } label: {
                         HStack (spacing: 40){
                             Text("Completed Tasks")
@@ -47,6 +50,7 @@ struct Filter: View {
 
                     Button {
                         selectedIndex = 2
+                        filter = .all
                     } label: {
                         HStack (spacing: 40){
                             Text("All Tasks")

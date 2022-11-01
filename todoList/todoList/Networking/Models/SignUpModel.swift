@@ -20,4 +20,3 @@ struct UserSession: Codable {
     let expiresIn: Int?
 }
 
-

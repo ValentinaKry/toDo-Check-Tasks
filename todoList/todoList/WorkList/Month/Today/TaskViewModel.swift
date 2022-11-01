@@ -7,7 +7,7 @@ class TaskViewModel: ObservableObject {
         TaskModel(task: "Meet according with design team", time: "10:00 am", offset: 0, isCompleted: false, isSwipped: false, taskDate: .now),
         TaskModel(task: "Read the book Zlatan", time: "12:30 am", offset: 0, isCompleted: false, isSwipped: false, taskDate: .now)
     ]
-
+//item c объектом
         //    func getSampleDate(offset: Int)-> Date {
         //        let calender = Calendar.current
         //

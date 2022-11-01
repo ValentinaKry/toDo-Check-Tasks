@@ -19,10 +19,15 @@ struct WorkListToday_View: View {
 //            List(0..<1) { item in
                 ScrollView(.vertical, showsIndicators: false) {
                     LazyVStack(spacing: 0) {
-                        ForEach(viewModel.items) { item in
-                            TaskView(task: $viewModel.items[getIndex(tasks: item)],
-                                     tasks: $viewModel.items)
+                        if filter == .all {
+                            ForEach(viewModel.items) { item in
+                                TaskView(task: $viewModel.items[getIndex(tasks: item)],
+                                         tasks: $viewModel.items)
+                            }
+                        } else if filter == .complited {
+
                         }
+
                     }
 //                }
 //                .listRowSeparator(.hidden)
