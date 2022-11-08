@@ -5,6 +5,7 @@ struct Welcome: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @GestureState private var dragOffset = CGSize.zero
     @ObservedObject var viewModel: WelcomeViewModel
+    @State private var showingAlert = false
 
     var body: some View {
 
@@ -32,8 +33,10 @@ struct Welcome: View {
                 } label: {
                     RedButton(nameButton: "Sign Up")
                 }
+                .alert(item: $viewModel.appError) { appError in
+                    Alert(title: Text("Oh Oh 🧐"), message: Text(appError.error.localizedDescription))
+                }
                
-
                 Button  {
                     viewModel.endTap()
                 } label: {
@@ -43,6 +46,7 @@ struct Welcome: View {
                 Spacer()
 
             }
+
             .padding(.top, 10)
         }
 

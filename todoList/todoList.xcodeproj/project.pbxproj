@@ -13,6 +13,7 @@
 		0D1A52C82906ACCC00B0B948 /* NewTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1A52C72906ACCC00B0B948 /* NewTaskView.swift */; };
 		0D1A52CB2906AD2300B0B948 /* ProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1A52CA2906AD2300B0B948 /* ProjectView.swift */; };
 		0D40DCC528DD8CC800EE7483 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D40DCC428DD8CC800EE7483 /* Task.swift */; };
+		0D44722B291A637E0042DB4E /* NetworkRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D44722A291A637E0042DB4E /* NetworkRequestError.swift */; };
 		0D4DA8B928ED852D0027305C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DA8B828ED852D0027305C /* NetworkManager.swift */; };
 		0D4DA8BB28F417C20027305C /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DA8BA28F417C20027305C /* WeekView.swift */; };
 		0D4DA8D928F6D2FB0027305C /* NavbarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D4DA8D828F6D2FB0027305C /* NavbarViewModel.swift */; };
@@ -77,6 +78,7 @@
 		0DD0AE8328D110CE0092FE1F /* ResetPassword.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0AE8228D110CE0092FE1F /* ResetPassword.swift */; };
 		0DD0AE8528D111110092FE1F /* Successful.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0AE8428D111110092FE1F /* Successful.swift */; };
 		0DD0AE8828D113920092FE1F /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DD0AE8728D113920092FE1F /* Tabbar.swift */; };
+		0DEAB7EC291103F800EECF81 /* SignInModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEAB7EB291103F800EECF81 /* SignInModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,7 @@
 		0D1A52C72906ACCC00B0B948 /* NewTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskView.swift; sourceTree = "<group>"; };
 		0D1A52CA2906AD2300B0B948 /* ProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectView.swift; sourceTree = "<group>"; };
 		0D40DCC428DD8CC800EE7483 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		0D44722A291A637E0042DB4E /* NetworkRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestError.swift; sourceTree = "<group>"; };
 		0D4DA8B828ED852D0027305C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0D4DA8BA28F417C20027305C /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		0D4DA8D828F6D2FB0027305C /* NavbarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavbarViewModel.swift; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 		0DD0AE8228D110CE0092FE1F /* ResetPassword.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword.swift; sourceTree = "<group>"; };
 		0DD0AE8428D111110092FE1F /* Successful.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Successful.swift; sourceTree = "<group>"; };
 		0DD0AE8728D113920092FE1F /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		0DEAB7EB291103F800EECF81 /* SignInModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,7 @@
 			children = (
 				0D1A52BC2900093500B0B948 /* WebServiceModel.swift */,
 				0D1A52BE2902D9F500B0B948 /* SignUpModel.swift */,
+				0DEAB7EB291103F800EECF81 /* SignInModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				0D4DA8B828ED852D0027305C /* NetworkManager.swift */,
+				0D44722A291A637E0042DB4E /* NetworkRequestError.swift */,
 				0D1A52B528FEA2B200B0B948 /* Models */,
 			);
 			path = Networking;
@@ -542,6 +548,7 @@
 				0DD0AE7328D10E1D0092FE1F /* PasswordForm.swift in Sources */,
 				0D4DA8DB28F6D3150027305C /* NavbarCoordinator.swift in Sources */,
 				0DD0AE4728D06ACE0092FE1F /* AppCoordinator.swift in Sources */,
+				0D44722B291A637E0042DB4E /* NetworkRequestError.swift in Sources */,
 				0D6FAFA128D472DB00E09979 /* ForgotPasswordCoordinator.swift in Sources */,
 				0D40DCC528DD8CC800EE7483 /* Task.swift in Sources */,
 				0D6EDF932907D4CB007296AE /* AddProjectView.swift in Sources */,
@@ -568,6 +575,7 @@
 				0D4DA8D928F6D2FB0027305C /* NavbarViewModel.swift in Sources */,
 				0DD0AE7528D10E6A0092FE1F /* RedButton.swift in Sources */,
 				0D6FAFB828DB3C2200E09979 /* CustomDatePicker.swift in Sources */,
+				0DEAB7EC291103F800EECF81 /* SignInModel.swift in Sources */,
 				0D1A52BF2902D9F500B0B948 /* SignUpModel.swift in Sources */,
 				0D6FAF9C28D4654500E09979 /* TabbarCoordinator.swift in Sources */,
 				0DA6A64A28D05DB300AF6FB9 /* AppDelegate.swift in Sources */,

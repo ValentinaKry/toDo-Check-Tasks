@@ -12,7 +12,7 @@ struct CustomDatePicker: View {
         VStack(spacing: 15) {
             //Days
             let days: [String] =
-            ["S", "M", "T", "W", "T", "F", "S"]
+            [ "M", "T", "W", "T", "F", "S", "S"]
 
             //Day View
             HStack(spacing: 0) {
@@ -138,7 +138,7 @@ struct CustomDatePicker: View {
 
         let  firstWeek = calendar.component(.weekday, from: days.first?.date ?? Date())
 
-        for _ in 0..<firstWeek - 1 {
+        for _ in 0..<firstWeek - 2 {
             days.insert(DateValue(day: -1, date: Date()), at: 0)
         }
 

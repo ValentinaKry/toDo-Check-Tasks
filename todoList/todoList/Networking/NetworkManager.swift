@@ -1,26 +1,13 @@
 import SwiftUI
 import Combine
 
-enum NetworkRequestError: LocalizedError, Equatable {
-    case invalidRequest
-    case badRequest
-    case unauthorized
-    case forbidden
-    case notFound
-    case error4xx(_ code: Int)
-    case serverError
-    case error5xx(_ code: Int)
-    case decodingError
-    case urlSessionFailed(_ error: URLError)
-    case unknownError
-}
-
 class NetworkManager: ObservableObject {
 
     static let shared = NetworkManager()
     let decoder = JSONDecoder()
     let encoder = JSONEncoder()
     let session = URLSession.shared
+
 
     func post<T, U>(body: T, path: String, header: String?) -> AnyPublisher<U, NetworkRequestError> where T : Encodable, U : Decodable {
         decoder.keyDecodingStrategy = .convertFromSnakeCase
@@ -45,7 +32,7 @@ class NetworkManager: ObservableObject {
             .map{ $0.data }
             .decode(type: U.self, decoder: decoder)
             .mapError{ error -> NetworkRequestError in
-                return NetworkRequestError.badRequest
+                return NetworkRequestError.badRequest(message: error.localizedDescription)
             }
             .eraseToAnyPublisher()
     }
@@ -65,8 +52,8 @@ class NetworkManager: ObservableObject {
             .receive(on: DispatchQueue.main)
             .map{ $0.data }
             .decode(type: U.self, decoder: decoder)
-            .mapError{ error in
-                self.handleError(error)
+            .mapError{ error -> NetworkRequestError in
+                return NetworkRequestError.badRequest(message: error.localizedDescription)
             }
             .eraseToAnyPublisher()
     }
@@ -86,8 +73,8 @@ class NetworkManager: ObservableObject {
             .receive(on: DispatchQueue.main)
             .map{ $0.data }
             .decode(type: U.self, decoder: decoder)
-            .mapError{ error in
-                self.handleError(error)
+            .mapError{ error -> NetworkRequestError in
+                return NetworkRequestError.notFound
             }
             .eraseToAnyPublisher()
 
@@ -117,7 +104,7 @@ class NetworkManager: ObservableObject {
             .map{ $0.data }
             .decode(type: U.self, decoder: decoder)
             .mapError{ error -> NetworkRequestError in
-                return NetworkRequestError.badRequest
+                return NetworkRequestError.badRequest (message: error.localizedDescription)
             }
             .eraseToAnyPublisher()
     }
@@ -127,11 +114,11 @@ extension NetworkManager {
 
     private func httpError(_ statusCode: Int) -> NetworkRequestError {
         switch statusCode {
-        case 400: return .badRequest
-        case 401: return .unauthorized
+        case 400: return .badRequest (message: "400")
+        case 401: return .unauthorized (message: "Invalid credentials.")
         case 403: return .forbidden
         case 404: return .notFound
-        case 402, 405...499: return .error4xx(statusCode)
+        case 402, 405...499: return .error4xx(statusCode, message: "❌")
         case 500: return .serverError
         case 501...599: return .error5xx(statusCode)
         default: return .unknownError

@@ -9,6 +9,10 @@ class WelcomeBackViewModel: ObservableObject {
     let networkManager = NetworkManager()
     @Published var email = ""
     @Published var password = ""
+   // var model:
+//    var signUpResponse: AnyPublisher<_, NetworkRequestError> {
+//        networkManager.post(body: model , path: Path.signIn.rawValue, header: nil)
+//    }
 
     func signUpTap () {
         signUpTapped.send()
