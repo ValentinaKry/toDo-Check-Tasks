@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D19FF18291E36B700B95270 /* ProjectModelNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D19FF17291E36B700B95270 /* ProjectModelNetwork.swift */; };
 		0D1A52BD2900093500B0B948 /* WebServiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1A52BC2900093500B0B948 /* WebServiceModel.swift */; };
 		0D1A52BF2902D9F500B0B948 /* SignUpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1A52BE2902D9F500B0B948 /* SignUpModel.swift */; };
 		0D1A52C32906853A00B0B948 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D1A52C22906853A00B0B948 /* Filter.swift */; };
@@ -82,6 +83,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D19FF17291E36B700B95270 /* ProjectModelNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectModelNetwork.swift; sourceTree = "<group>"; };
 		0D1A52BC2900093500B0B948 /* WebServiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceModel.swift; sourceTree = "<group>"; };
 		0D1A52BE2902D9F500B0B948 /* SignUpModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModel.swift; sourceTree = "<group>"; };
 		0D1A52C22906853A00B0B948 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				0D1A52BC2900093500B0B948 /* WebServiceModel.swift */,
 				0D1A52BE2902D9F500B0B948 /* SignUpModel.swift */,
 				0DEAB7EB291103F800EECF81 /* SignInModel.swift */,
+				0D19FF17291E36B700B95270 /* ProjectModelNetwork.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				0D6FAFAF28D8754D00E09979 /* TaskView.swift in Sources */,
 				0D6FAF9028D32E4900E09979 /* WelcomeCoordinator.swift in Sources */,
 				0DD0AE4C28D06D400092FE1F /* OnboardingCoordinator.swift in Sources */,
+				0D19FF18291E36B700B95270 /* ProjectModelNetwork.swift in Sources */,
 				0DD0AE7128D10DC60092FE1F /* MainTitle.swift in Sources */,
 				0DD0AE7B28D10F960092FE1F /* UsernameForm.swift in Sources */,
 				0DD0AE7D28D10FD60092FE1F /* Welcome.swift in Sources */,

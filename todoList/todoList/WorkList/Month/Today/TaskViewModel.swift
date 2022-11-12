@@ -7,14 +7,6 @@ class TaskViewModel: ObservableObject {
         TaskModel(task: "Meet according with design team", time: "10:00 am", offset: 0, isCompleted: false, isSwipped: false, taskDate: .now),
         TaskModel(task: "Read the book Zlatan", time: "12:30 am", offset: 0, isCompleted: false, isSwipped: false, taskDate: .now)
     ]
-//item c объектом
-        //    func getSampleDate(offset: Int)-> Date {
-        //        let calender = Calendar.current
-        //
-        //        let date = calender.date(byAdding: .day, value: offset, to: Date())
-        //
-        //        return date ?? Date()
-        //    }
 
         //MARK: Current Week Days
     @Published var currentWeek: [Date] = []
@@ -28,29 +20,7 @@ class TaskViewModel: ObservableObject {
         //MARK: Intializing
     init() {
         fetchCurrentWeek()
-       // filterTodayTasks()
     }
-
-        //MARK: Filter Today Tasks
-//    func filterTodayTasks() {
-//
-//        DispatchQueue.global(qos: .userInteractive).async {
-//
-//            let calendar = Calendar.current
-//            let filtered = self.items.filter {
-//                return calendar.isDate($0.taskDate, inSameDayAs: self.currentDay)
-//            }
-//                .sorted { task1, task2 in
-//                    return task2.taskDate < task1.taskDate
-//                }
-//
-//            DispatchQueue.main.async {
-//                withAnimation {
-//                    self.filteredTasks = filtered
-//                }
-//            }
-//        }
-//    }
 
     func fetchCurrentWeek() {
 

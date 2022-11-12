@@ -7,11 +7,8 @@ struct SignUpModel: Codable {
         let username: String
     }
     
-    struct Response: Codable {
-        let id: String?
-        let email: String?
-        let avatarUrl: Bool?
-        let userSession: UserSession?
+    struct SignUpResponse: Codable {
+        let data: SignUpResponseData
     }
     
     struct UserSession: Codable {
@@ -21,9 +18,12 @@ struct SignUpModel: Codable {
         let expiresIn: Int?
     }
 
-    struct Data: Codable {
-        let message: String
-        let code: Int
+    struct SignUpResponseData: Codable {
+        let id: String?
+        let email: String?
+        let avatarUrl: String?
+        let userSession: UserSession?
+        let message: String?
+        let code: Int?
     }
-
 }

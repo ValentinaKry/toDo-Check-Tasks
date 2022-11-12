@@ -15,7 +15,6 @@ class NetworkManager: ObservableObject {
         encoder.outputFormatting = .prettyPrinted
 
         let jsonData = try? encoder.encode(body)
-
         let url = URL(string: BaseURL.authorization.rawValue + path)
         var request = URLRequest(url: url!)
         request.httpMethod = Method.post.rawValue
@@ -30,6 +29,17 @@ class NetworkManager: ObservableObject {
         return session.dataTaskPublisher(for: request)
             .receive(on: DispatchQueue.main)
             .map{ $0.data }
+//            .tryMap { data, response -> SignInModel.SignInResponse in
+//
+//                let decoder = JSONDecoder()
+//
+//                    // first try to decode `LoginResponse` from the data
+//                if let loginResponse = try? decoder.decode(
+//                    SignInModel.SignInResponse.self, from: data
+//                ) {
+//                    return loginResponse
+//                }
+//            }
             .decode(type: U.self, decoder: decoder)
             .mapError{ error -> NetworkRequestError in
                 return NetworkRequestError.badRequest(message: error.localizedDescription)

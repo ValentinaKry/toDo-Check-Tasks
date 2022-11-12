@@ -12,6 +12,7 @@ struct ForgotPassword: View {
             UsernameForm(name: $viewModel.email, title: "Email", textField: "Enter your email")
             Button  {
                 viewModel.sendRequest()
+                
             } label: {
                 RedButton(nameButton: "Send Request")
             }

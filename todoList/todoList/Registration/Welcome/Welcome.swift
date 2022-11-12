@@ -21,9 +21,9 @@ struct Welcome: View {
                 .frame(width: 107, height: 104)
             }
 
-            UsernameForm(name: $viewModel.email, title: "Username", textField: "Enter your username")
+            UsernameForm(name: $viewModel.email, title: "Email", textField: "Enter your email")
                 .padding(.bottom, 5)
-            UsernameForm(name: $viewModel.username, title: "Email", textField: "Enter your email")
+            UsernameForm(name: $viewModel.username, title: "Username", textField: "Enter your username")
             PasswordForm(password: $viewModel.password)
 
             VStack(spacing: 60) {
@@ -33,20 +33,17 @@ struct Welcome: View {
                 } label: {
                     RedButton(nameButton: "Sign Up")
                 }
-                .alert(item: $viewModel.appError) { appError in
-                    Alert(title: Text("Oh Oh 🧐"), message: Text(appError.error.localizedDescription))
+                .alert(viewModel.appError ?? "", isPresented: $viewModel.isShowError) {
+
                 }
-               
+
                 Button  {
                     viewModel.endTap()
                 } label: {
                     SmallButton(title: "Sign In")
                 }
-
                 Spacer()
-
             }
-
             .padding(.top, 10)
         }
 

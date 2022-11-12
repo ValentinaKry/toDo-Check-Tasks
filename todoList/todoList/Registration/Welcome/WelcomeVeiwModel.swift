@@ -7,12 +7,13 @@ class WelcomeViewModel: ObservableObject {
     @Published var email = ""
     @Published var password = ""
     @Published var username = ""
-    @Published var appError : ErrorType? = nil
+    @Published var appError : String? = nil
+    @Published var isShowError: Bool = false
     var model: SignUpModel.Body {
         SignUpModel.Body(email: email, password: password, username: username)
     }
-    var signUpResponse: AnyPublisher<SignUpModel.Response, NetworkRequestError> {
-        networkManager.post(body: model, path: Path.signIn.rawValue, header: nil)
+    var signUpResponse: AnyPublisher<SignUpModel.SignUpResponse, NetworkRequestError> {
+        networkManager.post(body: model, path: Path.signUp.rawValue, header: nil)
     }
 
     private var cancellables = Set<AnyCancellable>()
@@ -32,8 +33,8 @@ class WelcomeViewModel: ObservableObject {
                 case .finished:
                     return
                 case .failure(let error):
-                    self.appError = ErrorType(error: .unauthorized(message:  "❌"))
-                    print(NetworkRequestError.unauthorized(message: "❌").localizedDescription)
+                    self.appError = error.errorDescription
+                    self.isShowError = true
                 }
             } receiveValue: { item in
                 print(item)
