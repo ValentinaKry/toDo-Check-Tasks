@@ -26,21 +26,23 @@ class NetworkManager: ObservableObject {
             request.setValue(header, forHTTPHeaderField: "Authorization")
         }
 
+        let dataToPrintError: Data? = nil
+
         return session.dataTaskPublisher(for: request)
             .receive(on: DispatchQueue.main)
             .map{ $0.data }
-//            .tryMap { data, response -> SignInModel.SignInResponse in
-//
-//                let decoder = JSONDecoder()
-//
-//                    // first try to decode `LoginResponse` from the data
-//                if let loginResponse = try? decoder.decode(
-//                    SignInModel.SignInResponse.self, from: data
-//                ) {
-//                    return loginResponse
-//                }
-//            }
             .decode(type: U.self, decoder: decoder)
+            .handleEvents(receiveCompletion: { completion in
+                if case .failure(let error) = completion {
+                    if let data = dataToPrintError,
+                       let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []),
+                       let jsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted),
+                       let jsonString = String(data: jsonData, encoding: String.Encoding.utf8) {
+                        print("❌\tRequest is failed")
+                        print("jsonString")
+                    }
+                }
+            })
             .mapError{ error -> NetworkRequestError in
                 return NetworkRequestError.badRequest(message: error.localizedDescription)
             }

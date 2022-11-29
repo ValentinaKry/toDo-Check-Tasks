@@ -41,14 +41,12 @@ struct NotesView: View {
             Text(note)
                 .font(.custom("Roboto-ThinItalic", size: 16))
                 .padding()
-                //.padding(.horizontal)
                 .frame(width: 350)
                 .lineSpacing(14)
 
         }
         .padding(.vertical, 4)
         .background(.white)
-        //.contentShape(Rectangle())
         .cornerRadius(5)
         .shadow(color: .gray.opacity(0.17), radius: 5, x: 4, y: 9)
         .padding(.bottom)
