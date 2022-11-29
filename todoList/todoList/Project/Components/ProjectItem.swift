@@ -26,8 +26,10 @@ struct ProjectItem: View {
 
             }
             .frame(width: 165, height: 180)
-            .background(Color.white)
+            .background(Color("White"))
+            .border(Color.gray, width: 2)
             .cornerRadius(7)
+
         }
     }
 }

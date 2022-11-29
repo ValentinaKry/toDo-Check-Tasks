@@ -8,7 +8,7 @@ struct TaskView: View {
     var body: some View {
 
         ZStack { 
-            Color.white
+            Color.init("White")
             HStack {
                 Spacer()
                 Button {
@@ -67,7 +67,7 @@ struct TaskView: View {
 
             }
             .padding(.vertical)
-            .background(.white)
+            .background(Color("White"))
             .frame(maxWidth: .infinity)
             .contentShape(Rectangle())
             .cornerRadius(5)

@@ -33,13 +33,13 @@ class NetworkManager: ObservableObject {
             .map{ $0.data }
             .decode(type: U.self, decoder: decoder)
             .handleEvents(receiveCompletion: { completion in
-                if case .failure(let error) = completion {
+                if case .failure(_) = completion {
                     if let data = dataToPrintError,
                        let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []),
                        let jsonData = try? JSONSerialization.data(withJSONObject: jsonObject, options: .prettyPrinted),
                        let jsonString = String(data: jsonData, encoding: String.Encoding.utf8) {
                         print("❌\tRequest is failed")
-                        print("jsonString")
+                        print(jsonString)
                     }
                 }
             })

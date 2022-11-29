@@ -67,7 +67,7 @@ struct Filter: View {
                 }
                 .padding(.horizontal)
                 .frame(width: 225,height: 140)
-                .background(.white)
+                .background(Color("White"))
                 .cornerRadius(7)
                 .padding(.bottom, 520)
                 .padding(.leading, 120)

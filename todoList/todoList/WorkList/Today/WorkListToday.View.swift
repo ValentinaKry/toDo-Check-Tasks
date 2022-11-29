@@ -15,26 +15,14 @@ struct WorkListToday_View: View {
             .font(.custom("Roboto-ThinItalic", size: 14))
             .foregroundColor(Color.init("Black"))
             .padding(.horizontal)
-
-//            List(0..<1) { item in
-                ScrollView(.vertical, showsIndicators: false) {
-                    LazyVStack(spacing: 0) {
-                        if filter == .all {
-                            ForEach(viewModel.items) { item in
-                                TaskView(task: $viewModel.items[getIndex(tasks: item)],
-                                         tasks: $viewModel.items)
-                            }
-                        } else if filter == .complited {
-
-                        }
-
+            ScrollView(.vertical, showsIndicators: false) {
+                LazyVStack(spacing: 0) {
+                    ForEach(viewModel.items) { item in
+                        TaskView(task: $viewModel.items[getIndex(tasks: item)],
+                                 tasks: $viewModel.items)
                     }
-//                }
-//                .listRowSeparator(.hidden)
+                }
             }
-
-
-//            .listStyle(.plain)
         }
     }
 

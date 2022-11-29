@@ -47,7 +47,7 @@ struct CustomDatePicker: View {
             }
 
             .padding(.horizontal)
-            .background(.white)
+            .background(Color("White"))
             .frame(maxWidth: .infinity)
             .contentShape(Rectangle())
             .cornerRadius(5)

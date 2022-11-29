@@ -55,13 +55,10 @@ struct AddProjectView: View {
                 }
                 .padding()
                 .frame(width: 320, height: 240)
-                .background(.white)
+                .background(Color("White"))
                 .cornerRadius(5)
-                //try do add New Project
                 .onTapGesture{
                     print("New Project")
-                    //savedProject()
-
                 }
             }
         }

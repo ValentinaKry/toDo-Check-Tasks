@@ -14,7 +14,7 @@ struct ProjectView: View {
                     .font(.custom("Roboto-ThinItalic", size: 20))
                     .padding(.vertical)
                     .frame(maxWidth: .infinity)
-                    .background(.white)
+                    .background(Color("White"))
                     .foregroundColor(Color("Black"))
                 ScrollView{
                     LazyVGrid(columns: colums, spacing: 20) {

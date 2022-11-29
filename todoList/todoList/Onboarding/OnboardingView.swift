@@ -21,7 +21,6 @@ struct OnboardingView: View {
                     description: "Task and assign them to colleagues.")
     ]
 
-
     var body: some View {
         VStack(spacing: 0) {
             TabView(selection: $currentIndex.animation()) {
@@ -68,7 +67,7 @@ struct OnboardingView: View {
                         .font(.custom("Roboto-ThinItalic", size: 18))
                         .padding(16)
                         .frame(maxWidth: .infinity)
-                        .background(Color.white)
+                        .background(Color("White"))
                         .cornerRadius(5)
                         .padding(.horizontal, 37)
                         .foregroundColor(Color.init("Black"))
@@ -77,7 +76,6 @@ struct OnboardingView: View {
             }
             .navigationBarHidden(true)
         }
-
     }
 }
 

@@ -9,7 +9,7 @@ struct QuickView: View {
                     .font(.custom("Roboto-ThinItalic", size: 20))
                     .padding(.vertical)
                     .frame(maxWidth: .infinity)
-                    .background(.white)
+                    .background(Color("White"))
                     .foregroundColor(Color("Black"))
                     .padding(.bottom, 20)
 
@@ -46,7 +46,7 @@ struct NotesView: View {
 
         }
         .padding(.vertical, 4)
-        .background(.white)
+        .background(Color("White"))
         .cornerRadius(5)
         .shadow(color: .gray.opacity(0.17), radius: 5, x: 4, y: 9)
         .padding(.bottom)

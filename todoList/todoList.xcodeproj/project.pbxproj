@@ -225,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				0D6FAFA728D8561100E09979 /* Navbar */,
+				0D6FAFB628DB3B6F00E09979 /* Today */,
 				0DD9777F28E42D1E002E1896 /* Month */,
 			);
 			path = WorkList;
@@ -455,7 +456,6 @@
 				0D6FAFB428D9DBC700E09979 /* WorkListMonth.View.swift */,
 				0D6FAFB728DB3C2200E09979 /* CustomDatePicker.swift */,
 				0D4DA8BA28F417C20027305C /* WeekView.swift */,
-				0D6FAFB628DB3B6F00E09979 /* Today */,
 			);
 			path = Month;
 			sourceTree = "<group>";
