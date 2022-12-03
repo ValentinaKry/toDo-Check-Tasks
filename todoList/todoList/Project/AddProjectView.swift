@@ -56,6 +56,7 @@ struct AddProjectView: View {
                 .padding()
                 .frame(width: 320, height: 240)
                 .background(Color("White"))
+                .border(Color("Border"), width: 2)
                 .cornerRadius(5)
                 .onTapGesture{
                     print("New Project")

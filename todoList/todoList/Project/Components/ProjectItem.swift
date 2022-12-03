@@ -27,7 +27,7 @@ struct ProjectItem: View {
             }
             .frame(width: 165, height: 180)
             .background(Color("White"))
-            .border(Color.gray, width: 2)
+            .border(Color("Border"), width: 2)
             .cornerRadius(7)
 
         }

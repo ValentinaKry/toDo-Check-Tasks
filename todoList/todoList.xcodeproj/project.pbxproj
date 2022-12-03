@@ -45,6 +45,7 @@
 		0D6FAFB528D9DBC700E09979 /* WorkListMonth.View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6FAFB428D9DBC700E09979 /* WorkListMonth.View.swift */; };
 		0D6FAFB828DB3C2200E09979 /* CustomDatePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6FAFB728DB3C2200E09979 /* CustomDatePicker.swift */; };
 		0D6FAFBA28DB7A0300E09979 /* DateValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D6FAFB928DB7A0300E09979 /* DateValue.swift */; };
+		0D8B4330293B93A6000F04C4 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B432F293B93A6000F04C4 /* ProfileView.swift */; };
 		0DA6A64A28D05DB300AF6FB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6A64928D05DB300AF6FB9 /* AppDelegate.swift */; };
 		0DA6A64C28D05DB300AF6FB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA6A64B28D05DB300AF6FB9 /* SceneDelegate.swift */; };
 		0DA6A65328D05DB400AF6FB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DA6A65228D05DB400AF6FB9 /* Assets.xcassets */; };
@@ -121,6 +122,7 @@
 		0D6FAFB428D9DBC700E09979 /* WorkListMonth.View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListMonth.View.swift; sourceTree = "<group>"; };
 		0D6FAFB728DB3C2200E09979 /* CustomDatePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDatePicker.swift; sourceTree = "<group>"; };
 		0D6FAFB928DB7A0300E09979 /* DateValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValue.swift; sourceTree = "<group>"; };
+		0D8B432F293B93A6000F04C4 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		0DA6A64628D05DB300AF6FB9 /* todoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = todoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DA6A64928D05DB300AF6FB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0DA6A64B28D05DB300AF6FB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -344,6 +346,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		0D8B432E293B9356000F04C4 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				0D8B432F293B93A6000F04C4 /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 		0DA6A63D28D05DB300AF6FB9 = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +382,7 @@
 				0DD0AE6A28D108620092FE1F /* Registration */,
 				0D4DA8DC28F7F9B50027305C /* WorkList */,
 				0D1A52C92906AD0B00B0B948 /* Project */,
+				0D8B432E293B9356000F04C4 /* Profile */,
 				0D6EDFB8290A727D007296AE /* Quick */,
 				0D1A52C62906ACAB00B0B948 /* NewTask */,
 				0DD0AE8628D1134F0092FE1F /* Tabbar */,
@@ -594,6 +605,7 @@
 				0DD0AE8128D110850092FE1F /* ForgotPassword.swift in Sources */,
 				0DA6A64C28D05DB300AF6FB9 /* SceneDelegate.swift in Sources */,
 				0D6FAF9A28D4653700E09979 /* TabbarViewModel.swift in Sources */,
+				0D8B4330293B93A6000F04C4 /* ProfileView.swift in Sources */,
 				0D6FAFB128D8A31600E09979 /* TaskModel.swift in Sources */,
 				0D6FAF9F28D472C700E09979 /* ForgotPasswordViewModel.swift in Sources */,
 				0D6FAFA928D8564900E09979 /* NavbarWorkListToday.View.swift in Sources */,
