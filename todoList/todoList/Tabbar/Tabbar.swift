@@ -8,6 +8,7 @@ struct Tabbar: View {
             switch selectedIndex {
             case 1: ProjectView()
             case 2: QuickView()
+            case 3: ProfileView()
             default: NavbarWorkListToday_View()
             }
             ZStack {
