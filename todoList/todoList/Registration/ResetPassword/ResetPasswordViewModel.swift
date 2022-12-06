@@ -1,9 +1,13 @@
 
-import Foundation
+import UIKit
+import Combine
 
 final class ResetPasswordViewModel: ObservableObject {
-    var resetTaped: (() -> Void)?
+    let networkManager = NetworkManager()
+    @Published var email = ""
+    @Published var password = ""
+    var resetTaped = PassthroughSubject<Void, Never>()
     func endTap () {
-        resetTaped?()
+        resetTaped.send()
     }
 }

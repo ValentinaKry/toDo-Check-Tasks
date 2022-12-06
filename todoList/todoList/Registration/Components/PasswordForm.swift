@@ -1,17 +1,13 @@
 import SwiftUI
 
 struct PasswordForm: View {
-    var title: String
-    var textField: String
-    @State private var password: String = ""
-    init(title: String, textField: String) {
-        self.title = title
-        self.textField = textField
-    }
-    init() {
-        title = "Password"
-        textField = "Enter your password"
-    }
+    var title: String = "Password"
+    var textField: String = "Enter your password"
+    @Binding var password: String
+//    init(title: String, textField: String) {
+//        self.title = title
+//        self.textField = textField
+//    }
 
     var body: some View {
         VStack (alignment: .leading, spacing: 10){
@@ -29,7 +25,8 @@ struct PasswordForm: View {
 }
 
 struct PasswordForm_Previews: PreviewProvider {
+    @State static var password = ""
     static var previews: some View {
-        PasswordForm()
+        PasswordForm(password: $password)
     }
 }

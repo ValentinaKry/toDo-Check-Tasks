@@ -5,6 +5,7 @@ struct OnboardingView: View {
         // MARK: - Variables
     @State private var currentIndex = 0
     @ObservedObject var model: OnboardingViewModel
+    var doneRequested: () -> ()
     
     private let screens: [OnboardView] = [
         OnboardView(imageName: "Screen1",
@@ -19,7 +20,6 @@ struct OnboardingView: View {
                     title: "Tasks and assign",
                     description: "Task and assign them to colleagues.")
     ]
-
 
     var body: some View {
         VStack(spacing: 0) {
@@ -67,7 +67,7 @@ struct OnboardingView: View {
                         .font(.custom("Roboto-ThinItalic", size: 18))
                         .padding(16)
                         .frame(maxWidth: .infinity)
-                        .background(Color.white)
+                        .background(Color("White"))
                         .cornerRadius(5)
                         .padding(.horizontal, 37)
                         .foregroundColor(Color.init("Black"))
@@ -76,7 +76,6 @@ struct OnboardingView: View {
             }
             .navigationBarHidden(true)
         }
-
     }
 }
 
@@ -120,7 +119,7 @@ struct OnboardView: View {
 struct OnboardingView_Previews: PreviewProvider {
     static var previews: some View {
         let view  = OnboardingViewModel()
-        OnboardingView(model: view)
+        OnboardingView(model: view, doneRequested: { })
     }
 }
 

@@ -9,9 +9,10 @@ struct ForgotPassword: View {
         VStack {
            MainTitle(firstTitle: "Forgot Password", description: "Please enter email to recevie your password reset instructions")
                 .padding(.top, 60)
-            UsernameForm()
+            UsernameForm(name: $viewModel.email, title: "Email", textField: "Enter your email")
             Button  {
                 viewModel.sendRequest()
+                
             } label: {
                 RedButton(nameButton: "Send Request")
             }

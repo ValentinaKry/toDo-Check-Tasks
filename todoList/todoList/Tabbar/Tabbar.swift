@@ -5,12 +5,19 @@ struct Tabbar: View {
     private var brandGradient = Gradient(colors: [Color.init("LightRed"), Color.init("Red")])
     var body: some View {
         VStack {
-            
-
+            switch selectedIndex {
+            case 1: ProjectView()
+            case 2: QuickView()
+            case 3: ProfileView()
+            default: NavbarWorkListToday_View()
+            }
             ZStack {
                 HStack {
                     Button {
-                        self.selectedIndex = 0
+                        withAnimation (.easeInOut){
+                            self.selectedIndex = 0
+                        }
+
                     } label: {
                         TabbarButton(imageName: "checkmark.circle.fill", buttonText: "My Task")
                     }
@@ -19,7 +26,10 @@ struct Tabbar: View {
                     Spacer(minLength: 12)
 
                     Button  {
-                        self.selectedIndex = 1
+                        withAnimation (.easeInOut) {
+                            self.selectedIndex = 1
+                        }
+
                     } label: {
                         TabbarButton(imageName: "square.grid.2x2.fill", buttonText: "Menu")
                     }
@@ -28,7 +38,10 @@ struct Tabbar: View {
                     Spacer().frame(width: 120)
 
                     Button {
-                        self.selectedIndex = 2
+                        withAnimation(.easeInOut) {
+                            self.selectedIndex = 2
+                        }
+
                     } label: {
                         TabbarButton(imageName: "list.bullet.rectangle.portrait.fill", buttonText: "Quick")
                     }
@@ -59,7 +72,6 @@ struct Tabbar: View {
                         .offset(x: 8, y: -25)
 
                 }
-
             }
         }
         .navigationBarHidden(true)

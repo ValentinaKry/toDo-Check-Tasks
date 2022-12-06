@@ -1,9 +1,13 @@
 
-import Foundation
+import UIKit
+import Combine
 
 final class ForgotPasswordViewModel: ObservableObject {
-    var onTap : (() -> Void)?
+    let networkManager = NetworkManager()
+    @Published var email = ""
+    @Published var password = ""
+    var onTapSubject = PassthroughSubject<Void, Never>()
     func sendRequest () {
-        onTap?()
+        onTapSubject.send()
     }
 }

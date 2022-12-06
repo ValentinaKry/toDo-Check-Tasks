@@ -4,11 +4,13 @@ import SwiftUI
 struct Welcome: View {
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @GestureState private var dragOffset = CGSize.zero
-    @ObservedObject var model: WelcomeViewModel
+    @ObservedObject var viewModel: WelcomeViewModel
+    @State private var showingAlert = false
 
     var body: some View {
 
-        VStack {
+        VStack{
+
             MainTitle(firstTitle: "Welcome", description: "Sign up to continue")
             Button {
 
@@ -19,32 +21,33 @@ struct Welcome: View {
                 .frame(width: 107, height: 104)
             }
 
-            UsernameForm()
+            UsernameForm(name: $viewModel.email, title: "Email", textField: "Enter your email")
                 .padding(.bottom, 5)
-            PasswordForm()
+            UsernameForm(name: $viewModel.username, title: "Username", textField: "Enter your username")
+            PasswordForm(password: $viewModel.password)
 
             VStack(spacing: 60) {
                 Button {
-                    model.finTap()
+                    viewModel.finTap()
                     hideKeyboard()
                 } label: {
                     RedButton(nameButton: "Sign Up")
                 }
-               
+                .alert(viewModel.appError ?? "", isPresented: $viewModel.isShowError) {
+
+                }
 
                 Button  {
-                    model.endTap()
+                    viewModel.endTap()
                 } label: {
                     SmallButton(title: "Sign In")
                 }
-
                 Spacer()
-
             }
-            .padding(.top, 70)
+            .padding(.top, 10)
         }
 
-        .navigationBarBackButtonHidden(true)
+        .navigationBarBackButtonHidden(false)
         .navigationBarItems(leading: Button(action : {
             self.mode.wrappedValue.dismiss()
         }){
@@ -56,21 +59,17 @@ struct Welcome: View {
             if(value.startLocation.x < 20 && value.translation.width > 100) {
                 self.mode.wrappedValue.dismiss()
             }
-
         }))
         .onTapGesture {
             hideKeyboard()
         }
-
-
     }
-
 }
 
 struct Welcome_Previews: PreviewProvider {
     static var previews: some View {
         let view = WelcomeViewModel()
-        Welcome( model: view)
+        Welcome( viewModel: view)
     }
 }
 
